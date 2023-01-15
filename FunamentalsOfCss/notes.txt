@@ -1,0 +1,217 @@
+Linking CSS to HMTL ~
+    <link href="style.css" rel="stylesheet">
+
+Anatomy     
+    Selector:           p 
+    Declaration Block:  {
+                            color: red;
+                        }
+    Declaration             color: red;
+    Property:               color:
+    value                          red;
+
+    CSS Declaration: 
+    p {
+        color: red;
+    }
+
+Inline Styles 
+    Use Style="" attribute ~ Its bad practice tho
+
+Internal Style Sheet 
+    Bad Practice 
+
+External Style Sheet 
+    Good 
+
+_____________________________________
+
+Universal Selector: 
+    *   {
+        //do stuff 
+    }
+
+Class Selector: 
+    .className
+
+Multiclass Best Practice: 
+    .green {
+        color: green 
+    }
+
+    .bigText {
+        font-size: 100px 
+    }
+
+Id Selector: 
+    #idName 
+
+Select by attrbitue: 
+    [href] {
+        //Do stuff
+    }
+
+Psuedo-class: 
+    Power with interaction 
+    p:hover {
+        //do stuff when hovered 
+    }
+
+Specificity: 0 0 0 
+    p {}    ~ 001
+    .class {} ~ 010 
+    #id {} ~ 100 
+
+Chaining 
+    p.green {}
+    Ehhh...
+
+Descendant Combinator 
+    Bad Practice ~ CSS shouldnt know about html structure. 
+
+multi selectors 
+    h1, 
+    .menu {
+        //do stuff 
+    }
+
+_____________________________________
+
+CSS Visual Rules 
+
+font-family ~ Declares Font typeface
+font-size   ~ Declares Font Size 
+font-weight ~ Declares Font weight / boldness 
+
+text-align  ~ Declares where to align text (left center right justify)
+
+color               ~ Declare text color 
+background-color    ~ Declare background color 
+
+opacity     ~ 0 for see through,  1 for fully visable 
+
+background-image    ~ Set image as background takes url()   ~ background-image: url(xx)
+
+!important  ~ Dont use. Write better css. 
+
+_____________________________________
+
+CSS Bible: 
+
+https://developer.mozilla.org/en-US/docs/Web/CSS
+
+_____________________________________
+
+Box Model: 
+
+Content > Padding > Border > Margin 
+
+    ^
+Height + Width (Traditionally)
+
+
+height  ~   Declares Height of element 
+width   ~   Delcares Width of element 
+
+border          ~   Declares / specifies border of element (border: 3px solid black;)
+border-radius   ~   Declares border corners to be rounded by X 
+
+padding         ~   Declares the amount of space between element content and 
+border (padding: ALL) (padding: Yaxis, Xaxis) 
+(padding: top, Xaxis, bottom) (padding: top, right, bot, left)
+padding-top     ~   Declares padding individually
+padding-right
+padding-bottom
+padding-left    
+
+margin          ~   Declares amount of space between element border 
+and other element borders (margin: ALL) (margin: Yaxis, Xaxis) 
+(margin: top, Xaxis, bottom) (margin: top, right, bot, left)
+margin-top      ~   Declares margin individually
+margin-right
+margin-bottom
+margin-left 
+
+Automatically center content  by declaring 
+    1) a width 
+    2) margin: 0 auto; 
+
+
+Margin Collapse: 
+    Margins will share space. Imagne Div A is on top of Div B.
+    Div A has a margin-bottom of 20px. 
+    Div B has a margin-top of 30px. 
+    
+    The margin will be 30px. To accomodate the neediest element. 
+
+max-width   ~   Declare a maximum width an element is allowed to be. 
+max-height  ~   Declare a maximum height an element is allowed to be.
+
+overflow    ~   Declare how to handle content that is bigger than its element. (big picture, small space allocation)
+    (visable, hidden, scroll, auto)
+
+
+Can reset default spacings by;  ~ Useful because different browsers have different default values
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+visibility ~    hide content, display content, or collapse content. 
+    (hidden, visable, collapse)
+
+_____________________________________
+
+Google Dev Tools! 
+
+    Elements > Computed 
+    Shows the box model! 
+
+_____________________________________
+
+Layout
+
+position    ~   Declare the type of positioning an element has ~    static(default) / relative / absolute / fixed / sticky
+
+position: relative;     ~   Allows us to move an element RELAVITE TO ITS DEFAULT VALUE 
+top                     ~   move the element down from the top by X 
+bottom                  ~   move the element up from the bottom by X 
+left                    ~   move the element right from the left by X 
+right                   ~   move the element left from the right by X
+
+
+position: absolute;     ~   Sets all other elements to ignore this element. 
+                            Element will be positioned relative to its closest positioned parent element. 
+top                     ~   move the element down from the top by X 
+bottom                  ~   move the element up from the bottom by X 
+left                    ~   move the element right from the left by X 
+right                   ~   move the element left from the right by X
+
+
+position:fixed;         ~   Sets the element to be fixed to the screen (Will not move)
+top                     ~   move the element down from the top by X 
+bottom                  ~   move the element up from the bottom by X 
+left                    ~   move the element right from the left by X 
+right                   ~   move the element left from the right by X
+
+position: sticky;       ~   Sets the element to stick to the viewport (will not move)
+top                     ~   move the element down from the top by X 
+bottom                  ~   move the element up from the bottom by X 
+left                    ~   move the element right from the left by X 
+right                   ~   move the element left from the right by X
+
+
+Z-index     ~   Declare the 3d position of the element, behind or infront of others. 
+    (-X for behind, 99999 for always on top )
+
+
+display    ~    Declare the type of display for an element
+
+display:inline          ~   wrap around content - take no space. 
+display:block           ~   take space. 
+display:inline-block    ~   wrap around content - take no space - Take height/Width values. 
+
+
+float / clear ~ Depreciated 
+
+_____________________________________

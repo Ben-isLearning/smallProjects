@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Essentials</h2>
+    <p>
+      Anatomy of CSS <br />
+      Selector ~ p <br />
+      Declaration Block ~ { color: blue;} <br />
+      Declaration ~ color: blue; <br />
+      Property ~ color: <br />
+      Value ~ blue; <br />
+      <br />
+      p { <br />
+      color: blue; <br />
+      } <br />
+      <br />
+      <hr>
+    <h3>Specificify</h3>
+      p = 001 <br />
+      .className = 010 <br />
+      #idName = 100 <br />
+      <br />
+      Seperation of concerns: Keep css in an external css file.
+    </p>
+    <hr />
+    <h3>Selectors</h3>
+    <p>
+      Universal: * <br />
+      Class: .className <br />
+      Id: #idName <br />
+      Multiclass: .green .fontSize72 <br />
+      Attribute: [href="https://www.google.co.uk"] <br />
+      Psuedo-class: (Specified special state) p:hover {...} <br />
+      MultiSelectors: h1, h2, h3 {...} <br />
+    </p>
+    <hr />
+
+    <h3>Working with Text</h3>
+    <p>
+    </p>
+        <span style="font-family:'Courier New', Courier, monospace">font-family declares the font's typeface</span> <br> 
+        <span style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">font-family declares the font's typeface</span> <br> 
+        <span style="font-family:'Times New Roman', Times, serif">font-family declares the font's typeface</span> <br> 
+        <br>
+
+        <span style="font-size:10px ;">font-size declares the fonts size (suprise) </span>  <br>      
+        <span style="font-size:15px ;">font-size declares the fonts size (suprise) </span><br>
+        <span style="font-size:20px ;">font-size declares the fonts size (suprise) </span><br>
+        <br>
+
+        <span style="font-weight:300 ;">font-weight declares the bondness of the font</span> <br>
+        <span style="font-weight:400 ;">font-weight declares the bondness of the font</span> <br>
+        <span style="font-weight:700 ;">font-weight declares the bondness of the font</span> <br>
+        <br>
+
+        <div style="width: 750px; border: 1px solid brown">
+            <span style="display: block; text-align: center;">  *Only works on Blocks text-align declares the alignment of the text</span> <br>
+            <span style="display: block; text-align:right ;"> *Only works on Blocks  text-align declares the alignment of the text</span> <br>
+            <span style="display: block; text-align:left ;">  *Only works on Blocks text-align declares the alignment of the text</span> <br>
+        </div>
+        <br>
+
+        <span style="background-color:aqua">background-color sets the background color (duh)</span> <br>
+        <span style="background-color:green">background-color sets the background color (duh)</span> <br>
+        <span style="background-color:red">background-color sets the background color (duh)</span> <br>
+        <br>
+
+        <div style="font-size: 20px; height: 500px; width: 500px; color: white; background-image: url(../FundamentalsOfHTML/media/cat-tabby.jpg)">
+        background-image sets the background of an element to an image
+     <br> <br> <br> <br> <br> <br> </div>
+
+    <hr>
+    <h3>CSS Bible</h3>
+    <p> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN</a> <br>
+     <a href="https://css-tricks.com/" target="_blank">Incredible Reference </a></p>
+     <br>
+
+     <hr>
+     <h3>Box Model</h3>
+     <p> Content > Padding > Border > Margin</p>
+     <p>Traditionally, Width and Height consist of only the content... the rest is extra.</p>
+     <p>With box-sizing: border-box; the whole box model is represented within the Width and Height.</p>
+      <p>width declares the width of the element <br>
+        height declaresd the height of the element </p>
+
+       <p>border specified the border of an element ~ Size / Style / Color <br>
+        border-radius specifies the amount of curvature on the corners of the border </p> 
+
+        <p>padding defines the amount of space beteen an element and its border <br>
+        padding: 10px ~ Padding on all 4 sides <br>
+        padding: 10px 20px ~ 10px on Yaxis, 20px on Xaxis  <br>
+        padding: 10px 20px, 30px ~ 10px on top, 20px on Xaxis, 30px on bottom <br>
+        padding: 10px 15px, 20px, 30px ~ Top / Right / Bottom / Left <br>
+    <br>
+We can use padding-top, padding-right, padding-bottom, padding-left to set the individual values too <br>
+    </p>
+
+    <p> margin defines the amount of space between an element's border and another element's border. <br>
+        margin: 10px ~ Margin on all 4 sides <br>
+        margin: 10px 20px ~ 10px on Yaxis, 20px on Xaxis  <br>
+        margin: 10px 20px, 30px ~ 10px on top, 20px on Xaxis, 30px on bottom <br>
+        margin: 10px 15px, 20px, 30px ~ Top / Right / Bottom / Left <br> <br>
+        We can use margin-top, margin-right, margin-bottom, margin-left to set margin individual values too 
+    </p>
+    <br>
+    <p style="border: 1px solid green; width: 50%; margin: 0 auto; ">To automatically center an element, specify a width, then set margin to 0 auto; <br>
+    </p>
+    <p>
+        elements obey the rule of "margin collapse". Margins will share space where they can. <br>
+        Element A's margin-left is 20px. element B's margin-right is 30px. <br>
+        The total margin will be 30px. they will share. <br>
+    </p>
+    <hr>
+    <article>
+        <h3>Layout</h3>
+        <p>position defines the type of positioing an elemement has. <br>
+            position is used in conjunction with 2 of the 4;  <br> <br>
+            top                     ~   move the element down from the top by X   <br>
+bottom                  ~   move the element up from the bottom by X  <br>
+left                    ~   move the element right from the left by X  <br>
+right                   ~   move the element left from the right by X <br>
+<br>
+</p>
+<p style="position: relative; left: 100px">position: absolute; (Moved 100px to the left) allows us to move an element RELATIVE TO ITS DEFAULT location
+</p>
+<p style="position: absolute; left: 350px;">position: absolute; allows the element to be ignored by all other elements</p>
+<p style="position: fixed; top: 60%; left: 50%;" >position: fixed; allows the element to be fixed to the screen (Will Not Move)</p>
+<p style="">position: sticky; allows an element to stick to the viewport</p>
+</article>
+<hr>
+
+    <div style="height: 100px; width: 400px; overflow: auto;">
+
+            <p style="background-color: aliceblue; position: sticky; top: 10px; " >position: sticky; allows an element to stick to the parent element</p>
+            Overflow declares how to handle an overflowing content; <br>
+
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam eligendi tenetur voluptatibus unde facilis expedita impedit, voluptatem natus suscipit libero nostrum dolores reiciendis, ut odit! Repudiandae saepe consectetur minus perferendis ipsa ab atque ad? Nemo nobis veniam, tempora cumque, velit illo minus neque accusamus vitae aliquam dicta in, aperiam aspernatur voluptatibus. Quam, aperiam quis. Voluptatum deleniti quasi voluptates accusamus provident, eligendi perferendis commodi ratione tempora debitis ducimus velit quidem excepturi at neque temporibus, molestiae corporis laborum harum magni facilis ut. Suscipit, incidunt laudantium atque, quos repellendus error praesentium expedita quis perspiciatis aliquid quia modi magnam tempora odit ducimus eligendi mollitia eos officiis cupiditate dignissimos nulla itaque dicta repellat. Obcaecati animi perspiciatis reprehenderit fuga et, provident repellendus eaque quae impedit aperiam explicabo qui excepturi magni molestiae dolor a accusantium, laudantium voluptas similique consectetur fugiat. Sapiente autem similique ducimus voluptates? Nemo ipsam excepturi voluptatem quaerat, voluptatum mollitia eveniet dignissimos nam modi minus ab. Harum maiores, sequi aperiam voluptatibus nihil quasi provident ex, nesciunt fugiat a eum earum esse. Ratione architecto quos minima explicabo iusto illum temporibus voluptatibus ducimus illo culpa veniam autem quam possimus, natus eaque numquam, repudiandae aperiam. Quisquam, corrupti maiores, nemo rem porro atque laborum sint, rerum adipisci quod vel?
+
+        </div>
+
+    <br>
+
+    <p>
+        visibility can be either...  <br>
+        visibility: visable; <br>
+        visibility: hidden; <br>
+        visibility: collapse; <br>
+    </p>
+
+    <p>z-index controls the 3d position of the element <br>
+    The higher, the more forward. <br>
+    The lower, the further back. <br>
+</p>
+
+<p>display controls the type of display an element uses. <br>
+display: inline;    Will take no space and wrap the element. <br>
+display: block;     Will take space and start a new line. <br>
+display: inline;    Will act like inline, but will accept height and width values. </p>
+    </body>
+
+</html>
