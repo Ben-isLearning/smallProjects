@@ -1,0 +1,98 @@
+.navList {
+  font-size: 18px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.customLink {
+  text-decoration: none;
+  color: blue;
+}
+
+.customLink:hover {
+  color: red;
+}
+
+.customLink:active {
+  color: burlywood;
+  font-size: larger;
+}
+
+.breadcrumbOne > li {
+  display: inline;
+}
+
+.breadcrumbOne li + li::before {
+  padding: 10px;
+  content: ">";
+}
+
+.breadcrumbOne a {
+  text-decoration: none;
+}
+
+.breadcrumbOne a:hover {
+  color: red;
+}
+
+.breadcrumb {
+  text-align: left;
+  list-style: none;
+}
+.breadcrumb li {
+  float: left;
+}
+
+.breadcrumb a {
+  color: #fff;
+  background: darkcyan;
+  text-decoration: none;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 15px;
+  padding: 0 5px;
+}
+
+.breadcrumb a::before,
+.breadcrumb a::after {
+  content: "";
+  position: absolute;
+  border-color: darkcyan;
+  border-style: solid;
+  border-width: 15px 5px;
+}
+
+.breadcrumb a::before {
+  left: -10px;
+  border-left-color: transparent;
+}
+
+.breadcrumb a::after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: darkcyan;
+}
+
+.breadcrumb a:hover {
+  background-color: blue;
+}
+.breadcrumb a:hover::before {
+  border-color: blue;
+  border-left-color: transparent;
+}
+.breadcrumb a:hover::after {
+  border-left-color: blue;
+}
+
+.breadcrumb li a {
+  color: #ffffff;
+  display: block;
+  font-family: "Pontano Sans", sans-serif;
+  font-size: 16px;
+  padding: 0 14px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}

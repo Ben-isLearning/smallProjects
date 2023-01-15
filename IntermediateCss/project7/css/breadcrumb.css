@@ -1,0 +1,15 @@
+.breadcrumb > li {
+  display: inline;
+}
+
+.breadcrumb > li:hover {
+  font-size: 1.2em;
+}
+
+.breadcrumb > li + li::before {
+  content: "/";
+}
+
+.attribute::after {
+  content: ")";
+}

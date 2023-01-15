@@ -1,0 +1,156 @@
+Color: 
+    Keywords
+    HEX
+    RGB
+    HSL 
+
+foreground Color ~ color 
+Background Color ~ background-color
+
+
+Hexidecimal Color: 
+    darkseagreen: #8FBC8F
+    sienna:       #A0522D
+    saddlebrown:  #8B4513
+    brown:        #A52A2A
+    black:        #000000 or #000
+    white:        #FFFFFF or #FFF
+    aqua:         #00FFFF or #0FF   
+    
+RGB Color (Red Green Blue): 
+    rgb(23, 45, 23);
+    rgb(143, 188, 143); 
+    rgb(160, 82, 45);
+
+Hexidecimal and RBG have 16,777,216 Colors. 
+
+HSL Color (Hue, Saturation, Lightness):
+    hsl(120, 60%, 70%);
+    hsl(240, 100%, 80%);
+    hsl(225, 100%, 25%);
+    hsl(325, 50%, 50%);
+
+Opacity / Alpha 
+    HSLA / RGBA 
+
+    color: rgba(234, 45, 98, 0.33);
+    color: hsla(34, 100%, 50%, 0.1);
+
+__________________________________________________
+
+Typography:
+
+font-family:
+    fallback fonts ~ setting more than 1 font just incase there is an issue with the first 
+    font Stacks ~ a particular group of fonts together.
+    Fonts with spaces need to be declared as strings with ''. 
+    
+font-family: Calson, Georgia, 'Times New Roman'; 
+
+font-weight ~ bolder / bold / normal / lighter 
+
+font-style ~ set the styling of a body of text
+    italic / normal / 
+
+text-transform ~ Set the transformation of a body of text 
+    uppercase / lowercase / capitalize / none
+
+letter-spacing:  ~ Set the space between letters 
+(Xpx / Xem); 
+
+line-height: ~ Set the spacing between lines of text 
+(Xpx / X% / Xem)
+
+Web Fonts - Google Fonts Wooo https://fonts.google.com 
+Link in HTML 
+
+__________________________________________________
+
+Links and Buttons; 
+
+Link Styling: 
+    Amend link styling with; color: + text-decoration:
+
+Link tooltip: 
+    Add title="x" to add a tooltip to any link. 
+
+Psuedo-class to handle state changes: 
+     a {
+      color: #466995;
+      text-decoration: underline; 
+      cursor: pointer;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }   
+
+Link States: 
+    :link
+    :visited
+    :hover
+    :active
+
+Clickability ~ Ease of interacting with design - if you can click it, it lets you know. 
+Affordances ~ Potentials for interaction collectively called affordances of an object. 
+Signifiers ~ the handle of a teacup signifies that is meant to be picked up. 
+UX Patterns - Establish reusable solutions to common problems. 
+In web browsers, one common example of visual feedback is the cursor image itself:
+it can demonstrate what behavior might be expected from a click:
+a pointing hand indicating that an interaction will occur, an i-beam shape indicating that text can be selected,
+a four-directional arrow showing that an element can be moved, and many more cursor styles and interactions.
+https://ui-patterns.com
+
+
+__________________________________________________
+
+Secondary Navigation:
+
+    Primary Navigation ~  contains the most important links and buttons that need to be displayed on every single page of the site.
+
+    Breadcrumb Navigation, consists of a clickable list of pages or attributes that led to the current page.
+        (Literally follow the breadcrumbs)
+
+    
+CSS: 
+.breadcrumb li {
+  display: inline;
+}
+
+.breadcrumb li+li::before {
+	padding: 10px;
+  content: ">";
+
+}
+
+HTML: 
+
+<ul class="breadcrumb">
+  <li>
+    <a href="shopping">Shopping</a>
+  </li>
+  <li>
+    <a href="fashion">Fashion</a>
+  </li>
+</ul>
+
+
+
+Breadcrumb Styles: 
+    .breadcrumb li a::before, .breadcrumb li a::after {
+      content: "";
+      position: absolute;
+      border-color: darkcyan;
+      border-style: solid;
+      border-width: 15px 5px;
+    }
+
+    .breadcrumb li a::before {
+      left: -10px;
+      border-left-color: transparent;
+    }
+
+Location Breadcrumb  - Based on structure of site 
+Path Breadcrumb  - Based on user's journey on the site 
+Attribute Breadcrumb - Based on attributes of current page or item 
+
