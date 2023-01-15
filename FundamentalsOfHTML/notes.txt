@@ -1,0 +1,181 @@
+HTML > 
+    HyperText MarkUp
+
+Anatomy > 
+    Open    <p>
+    content     Hello World
+    Close                   </p>
+
+Body > 
+    Where the Content lives 
+
+Structure > 
+    Relational Tree 
+
+Headings > 
+    Importance not size 
+
+Wildcard > 
+    Div (Divisions)
+
+Attributes > 
+    id / class / name / value / src / width / height / style / etc
+
+Text > 
+    <p> for block 
+    <span> for inline 
+
+Text Styling >
+    <em> for italic     
+    <strong> for bold 
+
+Linebreaks > 
+    <br> 
+
+Unorderd Lists > 
+    ul 
+        li /li 
+    /ul
+
+Ordered Lists >
+    ol 
+        li /li 
+    /ol
+
+Images > 
+    <img/ src="??" alt="??" > Self closing 
+
+Video >
+    <video src="??" controls> 
+     warning if video not supported 
+    </video>  
+
+________________________________
+
+Gotta tell IDE >
+    <!DOCTYPE html> 
+
+Declare >   
+    <html> 
+    </html>
+
+Head > Operational details go here 
+    <head> </head>
+
+Title > Tell the world 
+    <title> </title> 
+
+Links >  Anchor Tags 
+    <a>Click Me </a> 
+
+Better Links > 
+    <a target="_blank">Click Me</a>
+
+Relative Linking > ./ = current folder 
+    <a href="./xxx"> something </a> 
+
+image Linking > 
+    stick img in the a tag, it becomes clickable 
+    <a> <img> </a>
+
+Same page linking > 
+    set href = #id 
+    <a href="#cats"> Take me to cats </a> 
+
+Comments 
+    <!-- --!> 
+
+________________________________
+
+MDN - The bible 
+    https://developer.mozilla.org/en-US/ 
+
+
+Link to /project1 ~ Actual 1st project 
+
+________________________________
+
+Tables > 
+    <table> </table> 
+
+Table Rows > 
+    <tr> <tr> 
+
+Table Data > 
+    <td> <td> 
+
+Table Headings > 
+    <th> <th> 
+
+Column Span > 
+    <td> colspan="int" </td>
+
+Row Span > 
+    <td> rowspan="int" </td>
+
+Table Body > Actual data goes here 
+    <tbody> </tbody>
+
+Table Head > Table Rows / Headings only here 
+    <thead> </thead> 
+
+Table Foot > Summary Data goes here 
+    <tfoot> </tfoot>
+
+Link to Project 2 
+________________________________
+
+Semantic HTML - Good for Accessability / SEO / Understanding
+
+This        Vs      This 
+<div>               <header> 
+    <div>               <nav>
+    </div>              </nav>
+</div>              </header>                  
+
+<div>               <article> 
+    <div>               <figure>
+    </div>              </figure>
+</div>              </article>
+
+<div>               <footer>
+</div>              </footer>
+
+
+
+Header >    Usually for either nav links, or introductary content. 
+    <header> </header> 
+
+Nav >       For navigational links. 
+    <nav> </nav> 
+
+Main >      Only 1 per page - encapsulate main content of page. 
+    <main> </main> 
+
+Footer >    for misc information  - contact info / terms of use etc 
+    <footer> </footer> 
+
+Section >   For areas of document with same theme, many blog posts, many book chapters etc 
+    <section> </section> 
+
+Article >   For element that that holds content that makes sence on its own. 
+    <article> </article> 
+
+Aside >     For additional information that can enhance other element, but is optional 
+    <aside> </aside> 
+
+Figure >    For encapsulating media, images videos, code snippets etc. 
+    <figure> </figure> 
+
+Figcaption >For describing the media inside the figure tag. 
+    <figcaption> </figcaption> 
+
+Audio >     For embedding audio content, requires a source element with src + type. 
+    <audio controls>
+    <source src="audio.mp3" type="audio/mp3"> </source>
+    </audio>
+
+Video >     For declaring that we wish to display video content
+    <video src="x" controls? autoplay? loop?> </video>
+
+Embed >     For embeding any media. DEPRECIATED DO NOT use

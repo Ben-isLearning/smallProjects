@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Basic HTML Recap</h1>
+    <p>
+      <a target="_blank" href="./project1/index.html">Project 1</a> <br />
+      <a target="_blank" href="./project2/index.html">Project 2</a> <br />
+      <a target="_blank" href="./project3/index.html">Project 3</a> <br />
+    </p>
+    <hr />
+    <h2>Essentials</h2>
+    <p>
+      HTML = HyperText Markup <br />
+      The structure of HTML is a relational tree <br />
+      The number of headings (h1... h6) relates to its importance, not size
+      <br />
+      HTML elements can have attributes. <br />
+    </p>
+    <hr />
+    <h2>Elements</h2>
+    <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">Mozilla Bible</a> <br>
+    <a
+      href="https://www.codecademy.com/learn/learn-html/modules/learn-html-elements/cheatsheet"
+      target="_blank"
+      >Elements Cheat Sheet</a
+    >
+    <br />
+    <h3>&lt;h3&gt;This is a heading &lt;/h3&gt;</h3>
+    <p>
+      &lt;p&gt;
+      <br />With supporting paragraph and &lt;span style="color: red"&gt;
+      <span style="color: red"> differently styled text</span> &lt;/span&gt;
+      <br />
+      &lt;em&gt; <em>italic text</em> &lt;/em&gt; and even &lt;strong&gt;
+      <strong>bold text </strong>
+      &lt;/strong&gt;
+      <br />&lt;/p&gt;
+    </p>
+<hr>
+    <p>
+        &lt;p&gt; <br>
+        Unordered Lists; <br>
+        &lt;ul&gt; <br>
+        &lt;li&gt; Candy       &lt;/li&gt; <br>
+        &lt;li&gt; Bread       &lt;/li&gt; <br>
+        &lt;li&gt; Milk       &lt;/li&gt; <br>
+        &lt;/ul&gt; <br>
+        <br>
+        Ordered Lists; <br>
+        &lt;ol&gt; <br>
+        &lt;li&gt; Item 1       &lt;/li&gt; <br>
+        &lt;li&gt; Item 2    &lt;/li&gt; <br>
+        &lt;li&gt; Item 3     &lt;/li&gt; <br>
+        &lt;/ol&gt; <br>
+        &lt;/p&gt;  <br>
+    </p>
+<hr>
+    <p>
+        &lt;p&gt; <br>
+        Links / Anchor tags; <br> 
+        &lt;a&gt; href="https://www.google.co.uk"&lt;/a&gt;<br>
+        <a href="https://www.google.co.uk">Outbound Link</a> <br>
+        <br>
+        &lt;a&gt; href="https://www.google.co.uk" target="_blank"&lt;/a&gt;<br>
+        <a href="https://www.google.co.uk" target="_blank">Open in New Tab Link</a> <br>
+        <br>
+        &lt;a&gt; href="./project1/index.html" target="_blank"&lt;/a&gt;<br>
+        <a href="./project1/index.html" target="_blank">Relational Link - Open in New Tab Link</a> <br>
+        <br>
+        &lt;a&gt; href="#rain"&lt;/a&gt;<br>
+        <a href="#rain">Link to somewhere on this page</a> <br>
+        &lt;/p&gt;  <br>
+    </p>
+<hr>
+    <p>
+      &lt;p&gt;Each different element can have its own attributes <br>
+        &lt;a&gt; href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" <br>
+      target="_blank" <br>
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes"
+        target="_blank"
+        >Attributes Cheat sheet</a
+      >
+       &lt;/a&gt; <br>
+      For instance, we can set the color, disabled, width, height, src, etc.
+      <br /><br />
+      &lt;img src="./media/cat-black-and-white.jpg" <br />
+      alt="Black and white cat" <br />
+      width="250px" &gt;<br />
+
+      <img
+        src="./media/cat-black-and-white.jpg"
+        alt="Black and white cat"
+        width="350px"
+      />
+      <br />
+      <br />
+
+      &lt;video <br> 
+      src="./media/rain.mp4" <br>
+      controls <br>
+      muted <br>
+      autoplay <br>
+      alt="Gentle rain falling from above" <br>
+      &gt;Error: Video Not Supported &lt;/video&gt;  </br> 
+      <video
+      id="rain"
+        src="./media/rain.mp4"
+        width="350px"
+        controls
+        muted
+        autoplay
+        alt="Gentle rain falling from above"
+      >Video Not Supported</video>
+      <br />
+      &lt;/p&gt;
+    </p>
+    <hr />
+<h3>Tables</h3>
+<p>
+    &lt;thead&gt; <br>
+    &lt;tr&gt; <br>
+    &lt;th&gt;  Hello I am the table title   &lt;/th&gt; <br>
+    &lt;/tr&gt; <br>
+    &lt;tr&gt; <br>
+    &lt;th&gt;  Hello I am the column 1 title   &lt;/th&gt; <br>
+    &lt;th&gt;  Hello I am the column 2 title   &lt;/th&gt; <br>
+    &lt;/tr&gt; <br>
+    &lt;/thead&gt; <br>
+
+    &lt;tbody&gt; <br>
+    &lt;tr&gt;  <br>
+    &lt;td&gt;  Hello I am data in Col1 / Row 1   &lt;/td&gt; <br>
+    &lt;td&gt;  Hello I am data in Col2 / Row 1   &lt;/td&gt; <br>
+    &lt;/tr&gt; <br>
+    &lt;tr&gt;  <br>
+    &lt;td&gt;  Hello I am data in Col1 / Row 2   &lt;/td&gt; <br>
+    &lt;td&gt;  Hello I am data in Col2 / Row 2   &lt;/td&gt; <br>
+    &lt;/tr&gt; <br>
+    &lt;/tbody&gt; <br>
+</p>
+<table>
+    <thead>
+      <tr>
+        <th colspan="2"><h1>Table Header - th / Inside Table Head - thead / tr0</h1></th>
+      </tr>
+      <tr>
+        <th><h2>th inside thead - tr1</h2></th>
+        <th><h2>th inside thead - tr1</h2></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><h3>td inside tbody - tr 2 </h3></td>
+        <td><h3>td inside tbody - tr 2 </h3></td>
+      </tr>
+      <tr>
+        <td><h3>td inside tbody - tr 3</h3></td>
+        <td><h3>td inside tbody - tr 3</h3></td>
+      </tr>
+      <tr>
+        <td><h3>td inside tbody - tr 4 </h3></td>
+        <td><h3>td inside tbody - tr 4</h3></td>
+      </tr>
+      <tr>
+        <td><h3>td inside tbody - tr 5 </h3></td>
+        <td><h3>td inside tbody - tr 5</h3></td>
+      </tr>
+      <tr>
+        <td><h3>td inside tbody - tr 6 </h3></td>
+        <td><h3>td inside tbody - tr 6</h3></td>
+      </tr>
+    </tbody>
+  </table>
+<hr>
+<h3>Semantics</h3>
+<p>
+    Header >    Usually for either nav links, or introductary content. 
+    <header> </header> 
+
+Nav >       For navigational links. 
+    <nav> </nav> 
+
+Main >      Only 1 per page - encapsulate main content of page. 
+    <main> </main> 
+
+Footer >    for misc information  - contact info / terms of use etc 
+    <footer> </footer> 
+
+Section >   For areas of document with same theme, many blog posts, many book chapters etc 
+    <section> </section> 
+
+Article >   For element that that holds content that makes sence on its own. 
+    <article> </article> 
+
+Aside >     For additional information that can enhance other element, but is optional 
+    <aside> </aside> 
+
+Figure >    For encapsulating media, images videos, code snippets etc. 
+    <figure> </figure> 
+
+Figcaption >For describing the media inside the figure tag. 
+    <figcaption> </figcaption> 
+
+Audio >     For embedding audio content, requires a source element with src + type. 
+    <audio controls>
+    <source src="audio.mp3" type="audio/mp3"> </source>
+    </audio>
+ <br>
+Video >     For declaring that we wish to display video content
+    <video src="x" height="50px" controls? autoplay? loop?> </video>
+
+</p>
+  </body>
+</html>
