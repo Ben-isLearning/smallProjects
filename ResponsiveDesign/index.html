@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Flexbox and Grid</h2>
+    <hr />
+    <h4>Flexbox Projects</h4>
+    <ul style="display: flex; list-style: none">
+      <li style="margin: 20px">
+        <a target="_blank" href="./project1/index.html">Project 1</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project2/index.html">Project 2</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project3/index.html">Project 3</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project4/index.html">Project 4</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project5/index.html">Project 5</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project6/index.html">Project 6</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project7/index.html">Project 7</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project8/index.html">Project 8</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project9/index.html">Project 9</a>
+      </li>
+    </ul>
+    <p style="display: flex">
+      <a
+        style="margin: 20px"
+        target="_blank"
+        href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+      >
+        Flexbox Cheat Sheet</a
+      >
+      <br />
+    </p>
+    <hr />
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; max-width: 1800px">
+      <p>
+        a Flexbox (flexible container) can be declared by setting either; <br />
+        display: flex; or display: inline-flex;
+      </p>
+      <p>
+        The content inside a Flexbox can be manipulated many ways, focusing on
+        either <br />
+        the Main axis (Default X axis) or the Cross axis (Default Y axis)
+      </p>
+      <p>
+        justify-content: <br />
+        manipulates content on the main axis <br />
+        flex-start; > To start of flexbox <br />
+        flex-end; > To end of flexbox <br />
+        center; > In middle of flexbox <br />
+        space-between; > split out, only space between children. <br />
+        space-around; > split out, with space around children too <br />
+      </p>
+      <p>
+        align items: <br />
+        maipulates content on the cross axis <br />
+        flex-start; > To start of flexbox <br />
+        flex-end; > To end of flexbox <br />
+        center; > In middle of flexbox <br />
+        baseline; > bottom on the level, tops land wherever <br />
+        stretch; > Default / elements will stretch (specified heights wont
+        stretch) <br />
+      </p>
+      <p>
+        flex: <br />
+        shorthand for flex-grow, flex-shrink and flex-basis. <br />
+        flex-grow: specifies the amount an element should grow in comparison to
+        another <br />
+        (1 is default, 2 is twice, 3 is thrice etc) <br />
+        flex-shrink: specifies the amount an element should shrink in comparison
+        to another <br />
+        (1 is default, 2 is twice, 3 is thrice etc) <br />
+        flex-basis: specifies the size of an element before any shrinking or
+        growing occurs. <br />
+        (500px / 750px / 1500px / etc) <br />
+        <br />
+        flex: 1 2 500px;
+      </p>
+      <p>
+        flex-wrap: <br />
+        declares which way (if any) the flex-box should wrap. <br />
+        flex-wrap: wrap; > will move down a line. <br />
+        flex-wrap: wrap-reverse; > will move up a line. <br />
+        flex-wrap: no-wrap; > will not move. <br />
+      </p>
+
+      <p>
+        align-content: <br />
+        Moves MULTIPLE ROWS along the Cross Axis (Defaut Y axis) <br />
+        align-content: flex-start; > child elements to the top of parent
+        container <br />
+        align-content: flex-end; > child elements to the bottom of parent
+        container <br />
+        align-content: center; > child elements to the center parent container
+        <br />
+        align-content: space-between; > child elements to the top and bottom of
+        parent container with space between <br />
+        align-content: space-around; > child elements to the top and bottom of
+        parent container with space between, and space around. <br />
+        align-content: stretch > (Default) child elements stretch to take up
+        full height of parent row. <br />
+      </p>
+      <p>
+        flex-direction: <br />
+        set the start and the end of the flexbox, Left to Right? Right to left?
+        Up to down? Down to up? any way you want it! <br />
+        flex-direction: row; > (Default)By default it sets the direction to L >
+        R ( Sets Main Axis Start To End) <br />
+        flex-direction: row-reverse; > By default it sets the direction to R > L
+        ( Sets Main Axis End to Start) <br />
+        flex-direction: column; > By default it sets the direction to Top >
+        Bottom ( Sets Cross Axis start To End) <br />
+        flex-direction: column-reverse; > By default it sets the direction to
+        Bottom > Top ( Sets Cross Axis end To Start) <br />
+      </p>
+    </div>
+    <hr />
+    <h4>Grid Projects</h4>
+    <ul style="display: flex; list-style: none">
+      <li style="margin: 20px">
+        <a target="_blank" href="./project10/index.html">Project 10</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project11/index.html">Project 11</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project12/index.html">Project 12</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project13/index.html">Project 13</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project14/index.html">Project 14</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project15/index.html">Project 15</a>
+      </li>
+    </ul>
+    <br />
+    <a
+      style="margin: 20px"
+      target="_blank"
+      href="https://css-tricks.com/snippets/css/complete-guide-grid/"
+    >
+      Grid Cheat Sheet
+    </a>
+    <hr />
+    <div
+      style="
+        display: grid;
+        grid-template: repeat(autofit, minmax(300px, 1fr)) / repeat(
+            autofit,
+            minmax(100px, 300px)
+          );
+      "
+    >
+      <p style="grid-area: 1 / 1 / span 2 / span 2">
+        Declare a grid by display: grid; or display:inline-grid; <br />
+        **Grids need a specified width and height
+      </p>
+      <p style="grid-area: 1 / 3 / span 2 / span 2">
+        Declare the columns by grid-template-columns: repeat(autofit,
+        minmax(250px, 1fr))
+      </p>
+      <p style="grid-area: 3 / 1 / span 2 / span 4">
+        Declare the rows by grid-template-rows: repeat(autofit, minmax(250px,
+        1fr))
+      </p>
+
+      <p style="grid-area: 5 / 2 / span 3 / span 2">
+        Or Declare both with grid-template: repeat(autofit, minmax(250px, 1fr))
+        / repeat(autofit, minmax(250px, 1fr))
+      </p>
+
+      <p style="grid-area: 7 / 1 / span 2 / span 2">
+        Declare a gap in rows with row-gap: x
+      </p>
+      <p>Declare a gap in columns with column-gap: y</p>
+      <p>Declare a gap in Both with gap: x y</p>
+
+      <p>Grid items are the item elements used within a grid container.</p>
+
+      <p>set Grid Items' starting row with; grid-row-start; x</p>
+      <p>set Grid Items' ending row with; grid-row-end; y</p>
+      <p>set Both with grid-row: x y;</p>
+
+      <p>set Grid Items' starting column with; grid-column-start: x</p>
+      <p>set Grid Items' ending column with; grid-column-end: y</p>
+      <p>set both with grid-column: x y;</p>
+
+      <p>
+        Span Keyword: used to tell the grid-item how many (Rows/Columns) to span
+        <br />
+        grid-column: 2 / span 4; start column2, span 4 columns.
+      </p>
+
+      <p>
+        Set entire grid-item's existance with grid-area; RowStart/ ColStart/
+        RowEnd/ ColEnd; <br />
+        grid-area: 1/ 3/ span 2/ span 5;
+      </p>
+    </div>
+    <hr />
+    <h4>Advanced Grid Projects</h4>
+    <ul style="display: flex; list-style: none">
+      <li style="margin: 20px">
+        <a target="_blank" href="./project16/index.html">Project 16</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project17/index.html">Project 17</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project18/index.html">Project 18</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project19/index.html">Project 19</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project20/index.html">Project 20</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project21/index.html">Project 21</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project22/index.html">Project 22</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project23/index.html">Project 23</a>
+      </li>
+    </ul>
+    <hr />
+    <p>
+      grid areas can be also be declared with grid-template-areas: <br />
+      which takes a series of strings like; <br />
+      <br />
+      grid-template-areas: "head head" <br />
+      "nav nav" <br />
+      "info services" <br />
+      "footer footer"; <br />
+      <br />
+      which grid-items can be allocated to using; <br />
+      grid-area: "nav"; <br />
+      (This can also be used to overlap elemements)
+    </p>
+
+    <p>
+      Within grids -content is aimed at the entire grid as a whole, inside of
+      its grid container. <br />
+      <br />
+      <strong
+        >justify-content: is used to position the entire grid along the Row Axis
+        (X axis)</strong
+      >
+      <br />
+      justify-content: start; > aligns grid to left side of container <br />
+      justify-content: end; > aligns grid to right side of container <br />
+      justify-content: center; > centers the grid horizontally <br />
+      justify-content: stretch > stretches grid items to increase dize of grid
+      on X axis. <br />
+      justify-content: space-around; > creates space between and around <br />
+      justify-content: space-between; > creates space between only. <br />
+      justify-content: evenly; > places even amount of space between grid items
+      at either end. <br />
+      <br />
+
+      <strong
+        >align-content: is used to position the entire grid along the Column
+        Axis (Y Axis)</strong
+      >
+      <br />
+      align-content: start; > aligns grid to top side of container <br />
+      align-content: end; > aligns grid to bottom side of container <br />
+      align-content: center; > centers the grid horizontally <br />
+      align-content: stretch > stretches grid items to increase dize of grid on
+      Y axis. <br />
+      align-content: space-around; > creates space between and around <br />
+      align-content: space-between; > creates space between only. <br />
+      align-content: evenly; > places even amount of space between grid items at
+      either end. <br />
+      <br />
+    </p>
+    <hr />
+    <p>
+      within grids -items is aimed at the content inside of each grid item
+      <br />
+      <br />
+      <strong
+        >justify-items: is used to position content inside grid-items along the
+        Row Axis (X axis)</strong
+      >
+      <br />
+      justify-items: start; > content to left side of grid-item <br />
+      justify-items: right; > content to right side of grid-item <br />
+      justify-items: center; > content to center of grid-item <br />
+      justify-items: stretch; > content to fill the whole grid-item <br />
+      <br />
+
+      <strong
+        >align-items: is used to position content inside grid-items along the
+        Column Axis (Y axis)</strong
+      >
+      <br />
+      align-items: start; > content to top side of grid-item <br />
+      align-items: right; > content to bottom side of grid-item <br />
+      align-items: center; > content to center of grid-item <br />
+      align-items: stretch; > content to fill the whole grid-item <br />
+    </p>
+    <hr />
+    <p>
+      lastly, -self is aimed at individual grid-items. <br />
+      <br />
+
+      <strong>
+        justiy-self(X) / align-self(Y): is used to position an individual
+        element in the same way that <br />
+      </strong>
+      multiple elements are positioned with justify-items and align-items.
+      <br />
+      justify-self: start; > left side of grid <br />
+      justify-self: right; > right side of grid <br />
+      justify-self: center; > center of grid <br />
+      justify-self: stretch; > fill the whole grid <br />
+      <br />
+      align-self: start; > top side of grid <br />
+      align-self: right; > bottom side of grid <br />
+      align-self: center; > center of grid <br />
+      align-self: stretch; > fill the whole grid <br />
+    </p>
+    <hr />
+    <p>
+      <strong>implicit grid rules </strong>take over when the grid becomes
+      larger than what is set out by the explicit grid rules. <br />
+
+      grid-auto-rows: is the implicit counterpart to grid-template-rows. <br />
+      grid-auto-rows: 50px; > sets to 50px <br />
+      grid-auto-rows: 1fr; > sets to 1 fraction; <br />
+      <br />
+
+      grid-auto-columns: is the implicit counterpart to grid-template-columns.
+      <br />
+      grid-auto-columns: 50px; > sets to 50px <br />
+      grid-auto-columns: 1fr; > sets to 1 fraction; <br /><br />
+
+      grid-auto-folow: sets where new elements will be added <br />
+      grid-auto-flow: row; > (Default) sets new elements fill rows from L to R.
+      Create new Rows. <br />
+      grid-auto-flow: column; > sets new elements to fill columns from Top to
+      Bottom. Create New Cols. <br />
+      grid-auto-flow: dense; > sets new elements to fill existing holes in grid.
+      <br />
+      <br />
+      dense can be paired with row and column. <br />
+    </p>
+    <hr />
+    <h4>Responsive Design Projects</h4>
+    <ul style="display: flex; list-style: none">
+      <li style="margin: 20px">
+        <a target="_blank" href="./project24/index.html">Project 24</a>
+      </li>
+    </ul>
+    <hr />
+    <p>
+      In a nutshell, using fixed pixel values is a bad idea for making a
+      responsive website. <br />
+
+      use dynamic values like rem (Root em) and % (Percentage) <br />
+      (root font size is 16px) <br />
+      font-size: 1rem; > 16px; <br />
+      font-size: 2rem; > 32px; <br />
+      While math is hard and all, we can amend the default font-size to 10px,
+      and hey presto, using rem is cake. <br />
+      <br />
+      width: 50%; > 50% of its parent <br />
+      height: 75%; > 75% of its parent. <br />
+    </p>
+
+    <p>
+      Limiting sizes is a great way to set an upper and lower bound <br />
+      max-width: 500px; <br />
+      min-width: 250px; <br />
+      These rules ensure that the image width will be within 250 and 500px.
+      <br />
+      <br />
+
+      We can take this a step further with clamp(); <br />
+      which takes 3 arguements, minimum value, preferred value, and maximum
+      value. <br />
+      font-size: clamp(1rem, 2.5vw, 2rem); <br />
+      The above sets the font-size to between 1 and 2 rem.
+    </p>
+    <p>
+      Scaling images/Videos <br />
+      Set a container to have a specific value, then set the content within said
+      container to be max-width 100% and dynamic <br />
+      <br />
+      .container { <br />
+      width: 50%; <br />
+      height: 200px; <br />
+      overflow: hidden; <br />
+      } <br />
+      <br />
+      .container img { <br />
+      max-width: 100%; <br />
+      height: auto; <br />
+      display: block; <br />
+      } <br />
+    </p>
+
+    <p>
+      Scaling background Images; set background image to be scalable by <br />
+      <br />
+      .background { <br />
+      background-image: url('#'); <br />
+      background-repeat: no-repeat; <br />
+      background-position: center; <br />
+      background-size: cover; <br />
+      <br />
+      }
+    </p>
+    <hr />
+    <h4>Media Queries</h4>
+    <ul style="display: flex; list-style: none">
+      <li style="margin: 20px">
+        <a target="_blank" href="./project25/index.html">Project 25</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project26/index.html">Project 26</a>
+      </li>
+      <li style="margin: 20px">
+        <a target="_blank" href="./project27/index.html">Project 27</a>
+      </li>
+    </ul>
+    <hr />
+    <p>
+      Media queries allow CSS to inspect the device viewing the media, <br />
+      then show specific media based on the device queries. <br />
+      The only requrement for this is for the HTML to have a meta tag with
+      viewport. <br />
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"
+      /&gt;
+    </p>
+    <p>
+      Media Query Examples: <br />
+      @media (condition) {<br />
+      <br />
+      }<br />
+      <br />
+      AND keyword requires both/all conditions to be satisfied: <br />
+      @media only screen and (max-width: 480px) { <br />
+      >only for screens <br />
+      >with a max-width of 480px <br />
+      } <br />
+      <br />
+      @media only screen and (min-width: 320px) and (max-width: 480px) { <br />
+      >only for screens <br />
+      >with a min-width of 320px <br />
+      >with a max-width of 480px <br />
+      } <br />
+      <br />
+      >>Useful to serve higher quality images <br />
+      @media only screen and (min-resolution: 300dpi) { <br />
+      >only for screens <br />
+      >with a min-resolution of 300dpi <br />
+      } <br />
+      <br />
+      comma seperated list requires either or condition to be satisfied: <br />
+      @media only screen and (min-width: 480px), (orientation: landscape) {
+      <br />
+      >only screen <br />
+      >and min-width 480px // and orientation landscape. <br />
+      } <br />
+      <br />
+    </p>
+    <hr />
+  </body>
+</html>

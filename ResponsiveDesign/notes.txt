@@ -1,0 +1,387 @@
+Grids: 
+
+Grids consist of 
+    Margin, Columns, Gutters, Rows 
+
+Responsive grid will adapt to the viewport ~ Mobiles and Tablets will see a different view. 
+    12 / 6 / 3 column grids 
+
+Passive Whitespace:
+    Space around text - line-height / margin. 
+
+Active Whitespace: 
+    actively leaving a portion of the layout blank
+
+__________________________________________________
+
+Flexbox:
+    an element with display set to flex. 
+    display: flex;          > New Line
+    display: inline-flex;   > In line 
+
+justify-content: 
+    Moves content on Main axis  ~ (Default X axis)
+        flex-start;         > To start of flexbox 
+        flex-end;           > To end of flexbox 
+        center;             > In middle of flexbox 
+        space-between;      > split out, only space between children. 
+        space-around;       > split out, with space around children too 
+
+align-items: 
+    Moves content on Cross axis ~ (Default Y Axis)
+        flex-start;         > To start of flexbox 
+        flex-end;           > To end of flexbox 
+        center;             > In middle of flexbox 
+        baseline;           > bottom on the level, tops land wherever 
+        stretch;            > Default / elements will stretch (specified heights wont stretch)
+
+flex-grow: 
+    Specifies the amount elements within the flexbox grow in comparison to one Another
+        flex-grow: 1;       > Grows by 1 
+        flex-grow: 2;       > Grows 2x the 1st 
+        flex-grow: 3;       > Grows 3x the 1st 
+
+flex-shrink: 
+    Specifies the amount elements within the flexbox shrink in comparison to one Another
+        flex-shrink: 1;       > Shrinks by 1 
+        flex-shrink: 2;       > Shrinks 2x the 1st 
+        flex-shrink: 3;       > Shrinks 3x the 1st 
+
+flex-basis:    
+    specifies the size of an element within the flexbox before it begins shrinking or growing. 
+        flex-basis: 500px;      > element size is 500px before it morphs
+        flex-basis: 750px;      > element size is 750px before it morphs
+        flex-basis: 1500px;     > element size is 1500px before it morphs
+
+flex: 
+    shorthand property combining flex-grow, flex-shrink and flex-basis
+        flex: 2 1 150px;        >   (Grow 2, Shrink 1, Basis 150px)
+        flex: 1 2 150px;        >   (Grow 1, Shrink 2, Basis 150px)
+        flex: 1 150px;          >   (Grow 1, Basis 150px)
+        flex: 1 2 ;             >   (Grow 1, Shrink 2)
+
+flex-wrap: 
+    declares wraping behavior - elements wrap onto new line in X behaviour. 
+        flex-wrap: wrap;            >   child elements that dont fit into a row, will move down a line. 
+        flex-wrap: wrap-reverse;    >   child elements that dont fit into a row, will move up a line. 
+        flex-wrap: no-wrap;         >   child elements that dont fit into a row, will not move. 
+
+align-content: 
+    Moves MULTIPLE ROWS along the Cross Axis (Defaut Y axis) 
+        align-content: flex-start;      >   child elements to the top of parent container 
+        align-content: flex-end;        >   child elements to the bottom of parent container 
+        align-content: center;          >   child elements to the center parent container 
+        align-content: space-between;   >   child elements to the top and bottom of parent container with space between 
+        align-content: space-around;    >   child elements to the top and bottom of parent container with space between, and space around. 
+        align-content: stretch          >   (Default) child elements stretch to take up full height of parent row. 
+
+flex-direction:
+    set the start and the end of the flexbox, Left to Right? Right to left? Up to down? Down to up? any way you want it! 
+        flex-direction: row;            > (Default)By default it sets the direction to L > R  ( Sets Main Axis Start To End) 
+        flex-direction: row-reverse;    > By default it sets the direction to R > L  ( Sets Main Axis End to Start)
+        flex-direction: column;         > By default it sets the direction to Top > Bottom ( Sets Cross Axis start To End)
+        flex-direction: column-reverse; > By default it sets the direction to  Bottom > Top  ( Sets Cross Axis end To Start)
+
+flex-flow: 
+    shorthand property for flex-wrap and flex-direction. 
+        flex-flow: column wrap;         > sets flex-direction to column, and flex-wrap to wrap. 
+        flex-flow: row wrap-reverse;    > sets flex-direction to row, and flex-wrap to wrap-reverse. 
+    
+__________________________________________________
+
+Grid: 
+    Can declare an element to be a grid container by
+        display: grid;
+        display: inline-grid; 
+
+grid-template-columns: 
+    Can declare the size of the columns within the grid by 
+        grid-template-columns: 100px 2rem;                        >   2 Cols > 100px, 2rem. 
+        grid-template-columns: 20% 50em;                            >   2 Cols > 20%, 50em.
+        grid-template-columns: 1fr 3fr;                             >   2 Cols > 1 fraction of availiable space , 3 fractions of availiable space.
+        grid-template-columns: repeat(x, 1fr)                       >   X Cols > 1 fraction of availiable space for each column. 
+        grid-template-columns: repeat(autofit, minmax(250px, 1fr))  >   X Cols > Each between 250px and 1fr, CSS Will give as many columns as will fit.  
+    
+grid-template-rows: 
+    can declare size of the rows within the grid by 
+        grid-template-rows: 100px 2rem;    >   2 Rows > 100px, 2rem. 
+        grid-template-rows: 20% 50em;        >   2 Rows > 20%, 50em.
+        grid-template-rows: 1fr 3fr;         >   2 Rows > 1 fraction of availiable space , 3 fractions of availiable space.
+        grid-template-rows: repeat(x, 1fr)   >   X Rows > 1 fraction of availiable space for each column. 
+
+grid-template: 
+    shorthand for both the two above. 
+        grid-template: 100px 200px / 20% 50%
+        grid-template: repeat(autofit, minmax(250px, 1fr)) / repeat(autofit, minmax(250px, 1fr)) > Fill 'er up!
+
+Fractions:  
+    Rather than fixed pixel units, use responsive fractions to automatically divide space. 
+        grid-template-columns: 1fr 3fr;                             >   2 Cols > 1 fraction of availiable space , 3 fractions of availiable space.
+
+Repeat:
+    Rather than declare 9 columns each at 1fr, simply use the repeat function
+        grid-template-columns: 1fr/ 1fr/ 1fr/ 1fr/ 1fr/ 1fr;        >   6 Cols > 1 fraction of availiable space for each column. 
+        grid-template-columns: repeat(6, 1fr)                       >   6 Cols > 1 fraction of availiable space for each column. 
+        
+Minmax: 
+    The godsend of CSS- automatically calculates a size to fit between a lower and upper bound. 
+        minmax(200px, 300px)    >   set an appropreate size between 200px and 300px. 
+        grid-template-columns: repeat(autofit, minmax(250px, 1fr))  >   X Cols > Each between 250px and 1fr, CSS Will give as many columns as will fit.  
+
+column-gap: 
+    Declare the columns to have a gap of X; 
+        column-gap: 10px; 
+        column-gap: 1rem; 
+        column-gap: 5%; 
+
+row-gap: 
+    declare the rows to have a gap of X; 
+        row-gap: 10px; 
+        row-gap: 1rem; 
+        row-gap: 5%; 
+
+gap:
+    declare a grid to have X gap between rows and Y gap between columns.
+        gap: 20px 10px;     > 20px gap between rows / 10px between cols.    
+
+Grid items: 
+    literally items within the grid container. 
+
+
+grid-row-start: 
+    used to declare the beginning row of a grid item 
+        grid-row-start: 1;      > Starts on 1st grid row 
+
+grid-row-end:
+    used to declare the ending row of a grid item 
+        grid-row-end: 3;        > Ends JUST BEFORE 3rd grid row  (Acts like Arrays)
+
+grid-row: 
+    Used to declare both beginning and end rows of a grid item.
+        grid-row: 1 / 3;        > Starts on 1st, ends JUST BEFORE 3rd. 
+
+
+grid-column-start: 
+    used to declare the beginning column of a grid item 
+        grid-column-start: 1;      > Starts on 1st grid column 
+
+grid-column-end:
+    used to declare the ending column of a grid item 
+        grid-column-end: 3;        > Ends JUST BEFORE 3rd grid column  (Acts like Arrays)
+
+grid-column: 
+    Used to declare both beginning and end columns of a grid item.
+        grid-column: 1 / 3;        > Starts on 1st, ends JUST BEFORE 3rd. 
+
+Span Keyword: 
+    the span keyword in css tells the grid item to span X (rows/columns)
+        grid-column-start: span 2; 
+        grid-column-end: 6;             < Starts wherever, spanning 2. Ends JUST BEFORE line 6. 
+
+        grid-row-start: 3;
+        grid-row-end: span 3;           < Starts on 3, spanning 3. Ends JUST BEFORE line 7.  
+
+
+grid-area: 
+    shorthand for grid-row-start / grid-column-start / grid-row-end / grid-column-end. 
+        grid-area: 2 / 3 / 4 / span 5;      > Starts Row2, Column3  - ends JUST BEFORE Row4, Spanning 5Columns. 
+
+__________________________________________________
+
+Advanced Grid 
+
+grid-template-areas:
+    used to name sections of the grid, rather than numbering them.
+        grid-template-areas: "head head" 
+                             "nav nav" 
+                             "info services" 
+                             "footer footer";
+
+grid-area:
+    can be used to overlap elements. 
+
+justify-items:
+    is used to position grid-items along the Row axis (X axis)
+        justify-items: start;       >   left side of grid 
+        justify-items: right;       >   right side of grid 
+        justify-items: center;      >   center of grid 
+        justify-items: stretch;     >   fill the whole grid 
+
+justify-content: 
+    is used to position the entire grid along the Row Axis (X axis)
+        justify-content: start;     > aligns grid to left side of container 
+        justify-content: end;       > aligns grid to right side of container 
+        justify-content: center;    > centers the grid horizontally
+        justify-content: stretch    > stretches grid items to increase dize of grid on X axis. 
+        justify-content: space-around;  > creates space between and around 
+        justify-content: space-between; > creates space between only.
+        justify-content: evenly;        > places even amount of space between grid items at either end.  
+
+align-items: 
+    is used to position grid-iotems along the Column axis (Y axis)
+        align-items: start;       >   top side of grid 
+        align-items: right;       >   bottom side of grid 
+        align-items: center;      >   center of grid 
+        align-items: stretch;     >   fill the whole grid 
+
+align-content: 
+    is used to position the entire grid along the Column axis (Y axix)
+        align-content: start;     > aligns grid to top side of container 
+        align-content: end;       > aligns grid to bottom side of container 
+        align-content: center;    > centers the grid horizontally
+        align-content: stretch    > stretches grid items to increase dize of grid on Y axis. 
+        align-content: space-around;  > creates space between and around 
+        align-content: space-between; > creates space between only.
+        align-content: evenly;        > places even amount of space between grid items at either end.  
+
+justiy-self(X) / align-self(Y): 
+    is used to position an individual element in the same way that 
+    multiple elements are positioned with justify-items and align-items. 
+        justify-self: start;       >   left side of grid 
+        justify-self: right;       >   right side of grid 
+        justify-self: center;      >   center of grid 
+        justify-self: stretch;     >   fill the whole grid 
+
+        align-self: start;       >   top side of grid 
+        align-self: right;       >   bottom side of grid 
+        align-self: center;      >   center of grid 
+        align-self: stretch;     >   fill the whole grid 
+
+grid-auto-rows: 
+    the implicit counterpart to grid-template-rows. 
+    when the grid exceeds the size set by the template, auto kicks in. 
+        grid-auto-rows: 50px;   > sets to 50px 
+        grid-auto-rows: 1fr;    > sets to 1 fraction; 
+
+grid-auto-columns: 
+    the implicit counterpart to grid-template-columns. 
+    when the grid exceeds the size set by the template, auto kicks in. 
+        grid-auto-columns: 50px;   > sets to 50px 
+        grid-auto-columns: 1fr;    > sets to 1 fraction; 
+
+
+grid-auto-flow:
+    declare whether new elements will be added to rows, or columns. 
+        grid-auto-flow: row;    > (Default)  sets new elements fill rows from L to R.  Create new Rows.
+        grid-auto-flow: column; >            sets new elements to fill columns from Top to Bottom. Create New Cols. 
+        grid-auto-flow: dense;  >            sets new elements to fill existing holes in grid.
+
+        dense can be paired with row and column. 
+
+    
+
+grid-template-areas
+justify-items
+justify-content
+justify-self
+align-items
+align-content
+align-self
+grid-auto-rows
+grid-auto-columns
+grid-auto-flow
+
+__________________________________________________
+
+Responsive Design;
+    The ability of a website to resize and reorganize based on 
+    the size of other content 
+    the size of screen being viewed on
+
+em: 
+    *Meaning deprecated*
+    Refers to parents font size 
+    acts as a multiplier of default font size; 
+    (parents font size is 16px)
+        font-size: 1em;         > 16px;
+        font-size: 2em;         > 32px; 
+
+    
+rem:
+    stands for Root em. 
+    acts like em, but looks at root font size. 
+    (root font size is 16px)
+        font-size: 1rem;         > 16px;
+        font-size: 2rem;         > 32px; 
+
+percentages: 
+    any property that tahes a static value, 
+    can take a percentage value. 
+    This refers to a % of its parent element 
+    width: 50%; 
+    height: 75%; 
+
+Limits:
+    min-width: and max-width: 
+    set an elements minimum and maximum bounds. 
+
+Scaling images/videos: 
+    set container to fixed size 
+    set image within container to max-width 100% of its parent. 
+
+        .container {
+          width: 50%;
+          height: 200px;
+          overflow: hidden;
+        }
+
+        .container img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+        }
+
+Scaling background images: 
+    set a variety of css rules in one to acheive this. 
+        background-image: url('#');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+__________________________________________________  
+Media queries: 
+    simply tells the CSS to query what device is being used to access the media. 
+    then enforces a set of rules for the device that meets said rules. 
+
+Requirement: 
+    Viewport Meta Tag 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+media Queries: 
+    @media (condition) {
+
+    }
+
+AND keyword requires both/all conditions to be satisfied:
+    @media only screen and (max-width: 480px) {
+        >only for screens 
+        >with a max-width of 480px
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+        >only for screens 
+        >with a min-width of 320px 
+        >with a max-width of 480px 
+    }
+
+    @media only screen and (min-resolution: 300dpi) {
+        >only for screens 
+        >with a min-resolution of 300dpi 
+    }
+    >>Useful to serve higher quality images
+
+comma seperated list requires either or condition to be satisfied: 
+    @media only screen and (min-width: 480px), (orientation: landscape) {
+       >only screen
+       >and min-width 480px // and orientation landscape. 
+    }
+
+Dont use standard breakpoints, resize your content when its breaks...
+    standard breakpoints; 
+        mobile  : 320  - 480 
+        ipad    : 481  - 768
+        Laptop  : 769  - 1024
+        Screens : 1025 - 1200
+        XL      : 1201+ 
+
+__________________________________________________
