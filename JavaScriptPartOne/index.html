@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>JavaScript Projects</h3>
+    <ul style="list-style: none; display: flex; gap: 20px">
+      <li><a target="_blank" href="./project1/script.js">Project 1</a></li>
+      <li><a target="_blank" href="./project2/script.js">Project 2</a></li>
+      <li><a target="_blank" href="./project3/script.js">Project 3</a></li>
+      <li><a target="_blank" href="./project4/script.js">Project 4</a></li>
+      <li><a target="_blank" href="./project5/script.js">Project 5</a></li>
+      <li><a target="_blank" href="./project6/script.js">Project 6</a></li>
+      <li><a target="_blank" href="./project7/script.js">Project 7</a></li>
+      <li><a target="_blank" href="./project8/script.js">Project 8</a></li>
+      <li><a target="_blank" href="./project9/">Project 9</a></li>
+    </ul>
+    <p>
+      How To use Project 1 - 8 ~ <br />
+      Click Link > Open Devtools (Right Click page, Left Click inspect) <br />
+      Navigate to Console <br />
+      copy and paste whole JavaScript file into console <br />
+      Watch it work! <br />
+
+      <br />
+      Project 9 has a front-end :)
+    </p>
+    <hr />
+    <h3>Super Simple</h3>
+    <p>
+      Types: <br />
+      Number ~ 1 || 3.14 <br />
+      String ~ "hello" <br />
+      Boolean ~ True / False <br />
+      Null ~ Declared absence of value <br />
+      Undefined ~ Undeclared Value <br />
+      Object ~ {} <br />
+    </p>
+
+    <p>
+      Math: <br />
+
+      + <br />
+      * <br />
+      - <br />
+      / <br />
+      % <br />
+    </p>
+
+    <p>
+      Quick Math: <br />
+      += <br />
+      *= <br />
+      -= <br />
+      /= <br />
+    </p>
+
+    <p>
+      Counting: <br />
+      10++ = 11 <br />
+      10-- = 9 <br />
+    </p>
+
+    <p>
+      Properties: <br />
+      let myString = "Hello" <br />
+      myString.length; <br />
+    </p>
+
+    <p>
+      Methods: <br />
+      let myString = "Hello" <br />
+      myString.toUpperCase();
+    </p>
+
+    <p>
+      Reference JavaScript built in objects
+      <a
+        target="_blank"
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects"
+        >Here</a
+      >
+    </p>
+
+    <p>
+      Declare Variables: <br />
+      let changingVariable = "whatever you like"; <br /><br />
+
+      let fixedVariable = "Something Fixed";
+    </p>
+
+    <p>
+      Interpolation: <br />
+      let name = "Bobby"; <br />
+
+      let greeting = `Hello ${name}`; <br />
+    </p>
+
+    <hr />
+    <h3>Conditionals</h3>
+    <p>
+      If/Else: <br />
+      if (condition) { <br />
+      //Do stuff <br />
+      } else if (Other condition) { <br />
+      //Do Second thing <br />
+      } else { <br />
+      //Do Third Thing <br />
+      } <br />
+    </p>
+
+    <p>
+      Comparison: <br />
+      Less Than &lt; <br />
+      Greater Than &gt; <br />
+      LT || Equal to &lt;= <br />
+      GT || Equal to &gt;= <br />
+      Strict Equality === <br />
+      Loose Equality == <br />
+      Not Equal != ~ Loose Equality <br />
+      Not Equal !== ~ Strict Equality <br />
+    </p>
+
+    <p>
+      Logical Operators: <br />
+      && and <br />
+      || or <br />
+      ! not <br />
+    </p>
+
+    <p>
+      Truthy / Falsy: <br />
+      Not boolean true <br />
+      Not boolean false <br />
+
+      but the given variables will evaluate to something (truthy) or nothing
+      (falsy) <br />
+    </p>
+
+    <p>
+      Ternary Operator: <br />
+      Elegant way of writing simple if statements with ? <br />
+      <br />
+      let isNightTime = true; <br />
+      if (isNightTime) { <br />
+      console.log('Turn on the lights!'); <br />
+      } else { <br />
+      console.log('Turn off the lights!'); <br />
+      } <br />
+      <br />
+      vs <br />1
+      <br />
+      let isNightTime = true; <br />
+      isNightTime ? console.log('Turn on the lights!') : console.log('Turn off
+      the lights!'); <br />
+    </p>
+
+    <p>
+      Switch: <br />
+      If your conditional block becomes more than if / else if / else... <br />
+      use a switch block. <br />
+      <br />
+      switch (variable) { <br />
+      case "abc": { (variable = "abc") <br />
+      //do stuff <br />
+      break; <br />
+      } <br />
+      case 123: { (variable = 123) <br />
+      // do stuff; <br />
+      break; <br />
+      } <br />
+    </p>
+    <hr />
+    <h3>Functions</h3>
+    <p>
+      functions are black boxes that take an input, perform magic, then produce
+      an output. <br />
+      Its up to us to decide the magic. <br />
+      <br />
+      ES5 Functions: <br />
+      function greetWorld() { <br />
+      console.log("Hello World") <br />
+      } <br />
+      <br />
+      ES6 Functions: <br />
+      const greetWorld = () => { <br />
+      console.log("Hello World") <br />
+      } <br />
+      <br />
+      Both called as such; <br />
+      greetWorld(); <br />
+    </p>
+
+    <p>
+      Parameters / Params: <br />
+      Params are inputs that are specified at the time of creating the function.
+      <br />
+      Here width and height are params to the function. <br />
+      <br />
+      const calculateArea = (width, height) => { <br />
+      return width * height; <br />
+      }
+    </p>
+
+    <p>
+      Default Params: <br />
+      use; = "xxx" when setting a parameter <br />
+      <br />
+      const calculateArea = (width = 4, height = 4) => { <br />
+      return width * height; <br />
+      } <br />
+      <br />
+      calculateArea(); //Will return 16 (product of 4*4); <br />
+    </p>
+
+    <p>
+      Argumements / Args: <br />
+      Args are the inputs that are given at the time of calling the function.
+      <br />
+      Here 10 and 6 are args to the function. <br />
+      <br />
+      calculateArea(10, 6); <br />
+    </p>
+
+    <p>
+      Helper Functions: <br />
+      small functions that can be used inside other functions. <br />
+      <br />
+      const multiplyByNineFifths = (number) => { <br />
+      return number * (5/9); <br />
+      } <br />
+      <br />
+      const getFarenheight = (celcius) => { <br />
+      return multiplyByNineFifths(celcius) + 32; <br />
+      } <br />
+      <br />
+      getFarenheight(15) // Returns 59 <br />
+    </p>
+
+    <p>
+      Bulky vs Concise Function: <br />
+      <br />
+      const plantNeedsWater = (day) => { <br />
+      if (day === 'Wednesday') { <br />
+      return true; <br />
+      } else { <br />
+      return false; <br />
+      } <br />
+      }; <br />
+      <br />
+      vs <br />
+      <br />
+      const plantNeedsWater = day => day === 'Wednesday' ? true : false; <br />
+      <br />
+      Both do the exact same thing. <br />
+    </p>
+
+    <hr />
+    <h3>Scope</h3>
+    <p>
+      Scope: <br />
+      Scope is a one way street, <br />
+      stuff declared outside, can be referenced inside. <br />
+      stuff declared inside, cannot leave. <br />
+      <br />
+      let color = "blue"; - These are two different variables <br />
+      const myFunc = () => { <br />
+      let color = "red"; - These are two different variables <br />
+      console.log(color); <br />
+      } <br />
+      <br />
+      myFunc(); //Narrower Scope - Logs "red"; <br />
+      console.log(color); //Wider Scope - Logs "blue"; <br />
+    </p>
+
+    <p>
+      Scope Pollution: <br />
+      let color = "blue"; - These are the same variable <br />
+      const myFunc = () => { <br />
+      color = "red"; - These are the same variable <br />
+      console.log(color); <br />
+      } <br />
+      myFunc(); //Narrower Scope - Logs "red"; <br />
+      console.log(color); //Wider Scope - Logs "; <br />
+    </p>
+
+    <p>
+      Global Scope: <br />
+      let globalScope = "Hello World"; <br />
+      <br />
+      const myFunc = () => <br />
+      console.log(globalScope); <br />
+      } <br />
+      <br />
+      myFunc(); <br />
+    </p>
+    <br />
+    <p>
+      Block Scope: <br />
+      const myFunc = () => {<br />
+      let blockScope = "Hello World!"; <br />
+      console.log(blockScope)<br />
+      }<br />
+      <br />
+      myFunc(); // logs "Hello World"<br />
+      console.log(blockScope); // ERROR <br />
+    </p>
+  </body>
+</html>

@@ -1,0 +1,278 @@
+Js is a fantastic multitool - huzzah. 
+
+ES6 ~ Woo! 
+
+Bible ~ https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+__________________________________________________
+
+Super Basics; 
+    console.log("Hello World");
+    //This is a comment
+    Number  ~       1 || 3.14
+    String  ~       "hello"
+    Boolean    ~    True / False 
+    Null    ~       Declared absence of value 
+    Undefined ~     Undeclared Value
+    Object  ~       {}
+
+Math: 
+    + - * / 
+    % is modulo (the remainder of a division) 
+    11 % 3 =   2  (3 + 3 + 3 + 2)
+                  (3...6...9...11)
+
+String Concat: 
+    "Hello" + " " + "You"
+    `Hello You`
+
+Properties: 
+    let myString = "hello"; 
+    myString.length;    //prints 5;
+
+Methods:   
+    let myString = "hello";     
+    myString.toUpperCase();  // prints "HELLO"
+
+Build in objects: 
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects 
+
+
+Variables: 
+    let changingVariable = "whatever"; 
+
+    const constantValue = "somethingFixed"; 
+
+Math+:
+    let number = 12
+    number += 3 
+    //number now = 15
+    
+    number -= 5 
+    //number now = 10
+
+    number *= 2;
+    //number now = 20
+
+    number /= 4;
+    //number now = 5
+
+Counting:
+    let number = 10
+
+    number++;
+    //number now = 11
+
+    number--;
+    number--; 
+    //number now = 9; 
+
+Interpolation; 
+    let number = 12; 
+
+    `i wish i was ${number} feet tall`
+
+
+Manual type checking: 
+    typeof 
+    let x = 10; 
+    console.log(typeof x)
+
+    let y = "Hello"; 
+    console.log(typeof y)
+
+__________________________________________________
+
+Conditionals: 
+    if (condition) {
+        //do stuff
+    } else if (otherCondition) {
+        //do other stuff 
+    } else {
+        //do something completely different
+    }
+
+Comparison Operators:
+    Less Than < 
+    Greater Than >
+    LT || Equal to  <=
+    GT || Equal to  >=
+    Strict Equality ===
+    Loose Equality  == 
+    Not Equal       !=  ~ Loose Equality 
+    Not Equal       !== ~ Strict Equality 
+
+Logical Operators: 
+    && and 
+    || or  
+    !   not
+
+Truthy / Falsy: 
+    Not boolean true 
+    Not boolean false 
+
+    but the given variables will evaluate to something (truthy) or nothing (falsy)
+
+ 
+Ternary Operator: 
+    Elegant way of writing simple if statements with ? 
+
+    let isNightTime = true;
+    if (isNightTime) {
+      console.log('Turn on the lights!');
+    } else {
+      console.log('Turn off the lights!');
+    }
+
+    vs 
+
+    let isNightTime = true;
+    isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+
+
+Switch: 
+    If your conditional block becomes more than if / else if / else...
+    use a switch block. 
+
+    switch (variable) {
+        case "abc": {    (variable = "abc")
+        //do stuff
+        break;
+        }
+        case 123: {  (variable = 123)
+        // do stuff; 
+        break; 
+    }
+
+See projects 1-4
+__________________________________________________
+
+Functions:
+functions are black boxes that take an input, perform magic, then produce an output. 
+Its up to us to decide the magic. 
+
+    ES5 Functions: 
+        function greetWorld() {
+            console.log("Hello World")
+        }
+
+    ES6 Functions: 
+        const greetWorld = () => {
+            console.log("Hello World")
+        }
+
+
+Both called as such; 
+    greetWorld();
+
+
+Parameters / Params:    
+    Params are inputs that are specified at the time of creating the function. 
+    Here width and height are params to the function. 
+
+    const calculateArea = (width, height) => {
+        return width * height; 
+    } 
+
+Argumements / Args:
+    Args are the inputs that are given at the time of calling the function. 
+    Here 10 and 6 are args to the function. 
+
+    calculateArea(10, 6); 
+
+Default Params:
+    use; = "xxx" when setting a parameter
+
+    const calculateArea = (width = 4, height = 4) => {
+        return width * height; 
+    } 
+
+       calculateArea(); //Will return 16 (product of 4*4);
+
+Helper Functions:
+    small functions that can be used inside other functions. 
+
+    const multiplyByNineFifths = (number) => {
+        return number * (5/9);
+    }
+
+    const getFarenheight = (celcius) => {
+        return multiplyByNineFifths(celcius) + 32; 
+    }
+
+    getFarenheight(15) // Returns 59
+
+
+Bulky vs Concise Function: 
+
+    const plantNeedsWater = (day) => {
+      if (day === 'Wednesday') {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+vs
+
+    const plantNeedsWater = day => day === 'Wednesday' ? true : false;
+
+Both do the exact same thing. 
+
+__________________________________________________
+
+Scope: 
+    Scope is a one way street,
+    stuff declared outside, can be referenced inside. 
+    stuff declared inside, cannot leave. 
+
+    let color = "blue";     << These are two different variables 
+    const myFunc = () => {
+        let color = "red";  << These are two different variables
+        console.log(color); 
+    }
+
+    myFunc();               //Narrower Scope - Logs "red"; 
+    console.log(color);     //Wider Scope - Logs "blue";
+
+
+Scope Pollution: 
+    let color = "blue";     << These are the same variable 
+    const myFunc = () => {
+        color = "red";      << These are the same variable
+        console.log(color); 
+    }
+    myFunc();               //Narrower Scope - Logs "red"; 
+    console.log(color);     //Wider Scope - Logs ";
+
+Global Scope: 
+    let globalScope = "Hello World"; 
+
+    const myFunc = () => 
+        console.log(globalScope);
+    }
+
+    myFunc();
+
+
+Block Scope: 
+    const myFunc = () => {
+        let blockScope = "Hello World!"; 
+        console.log(blockScope)
+    }
+
+    myFunc();                   // logs "Hello World"
+    console.log(blockScope);    //  ERROR 
+
+
+__________________________________________________
+
+Js in the Browser > 
+    Inspect >> Console 
+
+Js Runtime > 
+    Environment that can support the running on JavaScript 
+        Browser 
+        Node Runtime  (Node.js)
+
+Skipped Setup Steps/ Already installed it last year 
