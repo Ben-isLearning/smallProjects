@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Accessible Design</h3>
+    <p>
+      <br />
+      Text: <br />
+      Use High contrast headings/text/backgrounds <br />
+      Text color should have X times the luminance of its paired <br />
+      darker color. <br />
+      (Aim for 7:1 for AAA) <br />
+      Contrast should be to atleast 4.5:1. <br />
+      or 3:1 for larger (24px+ )text sizes, <br />
+      Use https://webaim.org/resources/contrastchecker/
+      <br />
+      <br />
+      Color: <br />
+      Distinguish background and foreground colors <br />
+      use contrasting colors of a color wheel <br />
+      use color scheme with shades of brigness across single color. <br />
+      (Think about it in greyscale) <br />
+      pair colour with other forms of conveying information <br />
+      (red ~ Error message / green ~ Success)
+      <br />
+      <br />
+      Use headings correctly; <br />
+      headings connote importance, not size.
+      <br />
+      <br />
+      Use Real Text overlayed on images <br />
+      (Rather than images with text); <br />
+      screen-readers transform text to voice <br />
+      users can scale text <br />
+      less taxing on browser to load text
+      <br />
+      <br />
+      Trends: <br />
+      Text overlaid on images <br />
+      Adding dark transparent layer over image boosts contrast <br />
+      Adding text-shadow boosts contrast too.
+      <br />
+      <br />
+      Removing Input Labels: <br />
+      -low contrast bad for vision impaired <br />
+      -removal is bad for screen readers
+      <br />
+      <br />
+      Buttons/Links: <br />
+      -minimalism sacrifices contrast <br />
+      -colour alone is not enough to indicate clickability
+      <br />
+    </p>
+    <hr />
+    <h3>Accessiblity</h3>
+    <p>
+      <br />
+      Semantic HTML: <br />
+      nav, header, main, etc <br />
+      not <br />
+      div, div, div, etc
+      <br />
+      <br />
+      ARIA role: <br />
+      Roles: https://www.w3.org/TR/html-aria/#allowed-descendants-of-aria-roles
+      <br />
+      attribute role="xx" of an element. <br />
+      perhaps its essential, complementary
+      <br />
+      <br />
+      presentation: <br />
+      -Screen reader will skip "ordered list" and all subsequent children
+      elements. <br />
+      ol role="presentation"> <br />
+      li> Item 1 /li> <br />
+      /ol>
+      <br />
+      <br />
+      ARIA properties: <br />
+      Alternative text - a description of the image. <br />
+      img src="#" alt="a painting of mona lisa"/>
+      <br />
+      <br />
+      aria-label - gives screen reader additional information to read aloud
+      <br />
+      (visually we can infer that the name and image are related <br />
+      screen readers need extra help) <br />
+      p arial-label="Artist"> someone, 2010 /p>
+      <br />
+      <br />
+      Accessability Checklist
+      <a href="https://www.a11yproject.com/checklist/"> Here</a> <br />
+      Best practises:
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript"
+      >
+        Here</a
+      >
+    </p>
+  </body>
+</html>

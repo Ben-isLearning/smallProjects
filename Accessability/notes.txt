@@ -1,0 +1,74 @@
+Accessible Design; 
+
+Text: 
+    Use High contrast headings/text/backgrounds 
+    Text color should have X times the luminance of its paired 
+    darker color. 
+    (Aim for 7:1 for AAA)
+    Contrast should be to atleast 4.5:1.
+    or 3:1 for larger (24px+ )text sizes, 
+    Use     https://webaim.org/resources/contrastchecker/ 
+
+Color: 
+    Distinguish background and foreground colors 
+    use contrasting colors of a color wheel 
+    use color scheme with shades of brigness across single color. 
+        (Think about it in greyscale)
+    pair colour with other forms of conveying information
+        (red ~ Error message / green ~  Success)
+
+Use headings correctly;
+    headings connote importance, not size. 
+
+Use Real Text overlayed on images
+(Rather than images with text);
+    screen-readers transform text to voice 
+    users can scale text 
+    less taxing on browser to load text
+
+Trends: 
+    Text overlaid on images 
+        Adding dark transparent layer over image boosts contrast
+        Adding text-shadow boosts contrast too. 
+
+    Removing Input Labels: 
+        -low contrast bad for vision impaired
+        -removal is bad for screen readers 
+
+    Buttons/Links: 
+        -minimalism sacrifices contrast 
+        -colour alone is not enough to indicate clickability
+    
+____________________________________________________
+
+Accessability: 
+
+Semantic HTML:
+    nav, header, main, etc 
+    not 
+    div, div, div, etc 
+
+ARIA role: 
+    Roles: https://www.w3.org/TR/html-aria/#allowed-descendants-of-aria-roles 
+    attribute role="xx" of an element. 
+    perhaps its essential, complementary
+
+    presentation: 
+    -Screen reader will skip "ordered list" and all subsequent children elements. 
+    ol role="presentation">
+    li> Item 1 /li>
+    /ol> 
+
+ARIA properties: 
+    Alternative text - a description of the image. 
+    img src="#" alt="a painting of mona lisa"/>
+
+    aria-label - gives screen reader additional information to read aloud 
+        (visually we can infer that the name and image are related
+        screen readers need extra help)
+    p arial-label="Artist"> someone, 2010 /p>
+
+Accessability Checklist https://www.a11yproject.com/checklist/ 
+Best practises: https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript 
+____________________________________________________
+
