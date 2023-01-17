@@ -1,0 +1,567 @@
+Arrays: 
+
+Creation;
+    let myArray = ["values", "go", "here", 21, true]; 
+    const anotherArray = [1, 2, 3]; 
+Accessing via Indexing:
+    console.log(myArray[0])     //Prints "values";
+
+Changing via Indexing:
+    myArray[0] = "new values"; 
+
+Properties: 
+    myArray.length // Returns 5 
+
+Methods: 
+    myArray.push(false) //  Pushes another value onto the end. 
+
+    myArray.pop() //   Pops a value off from the end. 
+
+    myArray.join(", ")                              // Returns "values, go, here, 21, true, 1, 2, 3";  
+        // Takes a string Value, Returns a String
+
+    myArray.slice()     //Returns  ["values", "go", "here", 21, true]; 
+        // Take nothing, Return whole array. 
+    myArray.slice(1)    //Returns ["go", "here", 21, true]; 
+        // Take a starting index value. returns from Starting to end of array.  Returns Copy.
+    myArray.slice(2, 4) // Returns ["here", 21]
+        // Take a starting index value, and and ending index value. Returns from Starting, to JUST BEFORE ending. Returns Copy. 
+    myArray.slice(-2) // Returns [21, true]; 
+        // Take a starting index (-2 from the end). 
+    
+    
+    myArray.splice(2, 1)    //Returns ["values", "go", "here", true]; 
+        // Take a Start index, Delete Count - DESTRUCTIVE - OPERATES ON ARRAY
+    myArray.splice(0, 0, "NewFirstEntry") // Returns ["newFirstEntry", "values", "go", "here", true]; 
+        // Take a Start index, Delete Count, data value -  DESTRUCTIVE - OPERATES ON ARRAY. 
+    myArray.splice(-1, 1, false)    // Returns  ["newFirstEntry", "values", "go", "here", false];
+        // Take a start index, Delete Count, data value - DESTRUCTIVE - OPERATES ON ARRAY. 
+
+    let value = myArray.shift()     //Returns "values"; 
+        // Returns new value. Deletes value from Array -  DESTRUCTIVE - OPERATES ON ARRAY. 
+        
+    myArray.unshift(1,2,3);     //Returns [1, 2, 3, "newFirstEntry", "values", "go", "here", false];
+        // Adds one or more values to the array. Returns the new length of the array. 
+
+    let newArray = myArray.concat(anotherArray)    // Returns  ["values", "go", "here", 21, true, 1, 2, 3]; 
+        // Returns new array 
+    
+
+Nested / 3d Arrays; 
+    let simpleArray = [1,2,3,4,5,6,7,8,9]; 
+    let nestedArray = [[1,2,3], [4,5,6], [7,8,9]];
+
+simpleArray[0]      //Prints 1
+nestedArray[0]      //Prints [1,2,3]
+nestedArray[0][0]   //Prints 1
+
+__________________________________________
+
+Loops: 
+
+For Loop:   Checks, Then Loops
+    
+    for (let i = 0; i > 10; i++) {
+        console.log(i)
+    }
+
+    for (Declare Iterator, Stopping Condition, Iteration Statement) {
+        //Do Stuff 
+    }
+
+Reverse For Loop: 
+    for (let i = 10; i >= 0; i--) {
+        console.log(i)
+    }
+
+    for (Declare Iterator, Stopping Condition, Iteration Statement) {
+        //Do Stuff 
+    }
+
+Looping Through Arrays; 
+
+    for (let i=0; i < myArray.length; i++) {
+        //Do Stuff
+    }
+
+        for (Declare Iterator, Stopping Condition - I becomes greater than length of array, Iteration Statement) {
+        //Do Stuff 
+    }
+
+Nested Loops: Bye Bye BigO
+    
+    for (let i = 0; i < 3; i++) {
+      console.log(`Loop ${i}`);
+      for (let j = 0; j <= 5; j++) {
+        console.log(j+1);
+      }
+    }
+
+    for (Declare Iterator, Stopping Condition, Iteration Statement) {
+    //Do Stuff 
+        for (Declare Another Iterator, Another Stopping Condition, Another Iteration Statement) {
+        //Do Stuff 
+        }
+    }
+
+While Loop:  Keeps going untill satisfied
+
+    let number;
+    while (number != 5) {
+     number = Math.floor(Math.random() * 10);
+     console.log(number);
+    }
+
+    while (declare Condition) {
+        //Do stuff until satisfied. 
+    }
+
+Do While Loop:  Keeps going untill satisfied
+
+    let target = 10
+    let current = 0; 
+
+    do {
+        current++
+        console.log("Added One!");
+    } while (current < target); 
+
+    do {
+        //Do stuff 
+    }  while (Stopping Condition)
+
+Break Keyword:  can be used to break; out of loops. 
+    
+    for ( let i = 0; i < 10; i++) {
+        console.log(i)
+          if (i == 3) {
+            break;
+          } 
+        }
+
+__________________________________________
+
+For...Of Loop:
+
+    let hobbies = ["running", "cooking", "coding"];
+
+    for (const hobby of hobbies) {
+        console.log(`i enjoy ${hobby}`);    
+    }
+
+    let stringOfChars = "joey" 
+
+    for (const char of stringOfChars) {
+        console.log(char);    
+    }
+
+    for (Declare Iterator of ListToItterate) {
+        //Do stuff
+    }
+
+
+Break; Breaks out of the loop altogether    (This only logs the first 2 birds. )
+
+    const strangeBirds = ['Shoebill', 'Cockatrice', 'Basan', 'Terrorbird','Parotia','Kakapo'];
+
+    for (const bird of strangeBirds) {
+      if (bird === 'Basan'){ 
+        break; 
+      }
+      console.log(bird);
+    }
+
+Continue; Stops the current iteration, and continues from the top.  (This logs everything but the Cow)
+
+    const strangeBirds = ['Shoebill', 'Cockatrice', 'Basan', 'Terrorbird','Parotia','Kakapo'];
+
+    for (const bird of strangeBirds) {
+      if (bird === 'Cow'){ 
+        continue;  
+      }
+      console.log(bird);
+    }
+
+__________________________________________
+
+Objects
+
+Create an object: 
+    let myObject = {
+        homePlanet: "Earth", 
+        color: "Blue"
+    };
+
+Accessing Properties Via Dot:
+    myObject.homePlanet;    //Returns "Earth"
+
+Accessing Properties Via Bracket:
+    myObject["color"];      //Returns "Blue"
+
+Assigning a property: 
+    myObject.numEngines = 4; 
+    myObject["numWheels"] = 4; 
+
+Assigning a Method: 
+
+    let myObject = {
+        homePlanet: "Earth", 
+        color: "Blue"
+
+        spin: function() {
+            console.log("World is spining...");
+        }
+    };
+
+Nested Objects: 
+    See Project 5. 
+
+Passing By Reference: 
+    Objects are passed by reference. 
+    changing myObject.color elsewhere will change the actual color property of the object 
+
+    let spaceship = {
+      'Fuel Type' : 'Turbo Fuel',
+      homePlanet : 'Earth'
+    };
+
+    function greenEnergy(obj) {
+      obj[`Fuel Type`] = `avocado oil`
+    }
+    greenEnergy(spaceship)
+
+    function remotelyDisable(obj) {
+      obj[`disabled`] = true
+    }
+
+    remotelyDisable(spaceship);
+
+    console.log(spaceship);
+
+
+Looping Through Objects: 
+    For...In 
+
+    let spaceship = {
+      crew: {
+        captain: { 
+          name: 'Lily', 
+          degree: 'Computer Engineering', 
+          cheerTeam() { console.log('You got this!') } 
+        },
+        'chief officer': { 
+          name: 'Dan', 
+          degree: 'Aerospace Engineering', 
+          agree() { console.log('I agree, captain!') } 
+        },
+        medic: { 
+          name: 'Clementine', 
+          degree: 'Physics', 
+          announce() { console.log(`Jets on!`) } },
+        translator: {
+          name: 'Shauna', 
+          degree: 'Conservation Science', 
+          powerFuel() { console.log('The tank is full!') } 
+        }
+      }
+    }; 
+
+    for (let crewMember in spaceship.crew) {
+        console.log(`${crewMember}: ${cspaceship.crew[crewMember].name}`)
+    }
+__________________________________________
+
+Advanced Objects: 
+
+this: 
+    this points to its parent. 
+
+    const robot = {
+      model: "1E78V2",
+      energyLevel: 100,
+      provideInfo() {
+        return `I am ${this.model} and my current energy level is ${this.energyLevel}`
+      },
+    };
+
+    In this instance this.model is the same as robot.model. 
+
+Arrow Functions and this:
+    Don't quite work together because the this keyword is bound to the global object. 
+
+Privacy:
+    common convention see's us putting _ before properties to signify that properties 
+    should not be altered. 
+
+    _fixedAmount: 100; 
+
+Getters: 
+    Methods with the sole purpose of getting internal properties. 
+
+    const person = {
+      _firstName: 'John',
+      _lastName: 'Doe',
+      get fullName() {
+        if (this._firstName && this._lastName){
+          return `${this._firstName} ${this._lastName}`;
+        } else {
+          return 'Missing a first name or a last name.';
+        }
+      }
+    }
+    
+    // To call the getter method: 
+    person.fullName; // 'John Doe' 
+
+Setters: 
+    Methods with sole purpose of setting value of internal properties. 
+
+    const person = {
+      _age: 37,
+      set age(newAge){
+        if (typeof newAge === 'number'){
+          this._age = newAge;
+        } else {
+          console.log('You must assign a number to age');
+        }
+      }
+    };
+
+Factory Functions:
+    Literally a function that acts as a factory to churn out individual objects
+
+    function robotFactory(model, mobile) {
+      return {
+        model: model, 
+        mobile: mobile,
+        beep() {
+          console.log("Beep Boop")
+        }
+      }
+    }
+
+    const tinCan = robotFactory("P-500", true)
+    console.log(tinCan.model);
+    tinCan.beep()
+
+ES6 Shorthand: 
+
+    const robotFactory = (model, mobile) => {
+      return {
+        model,
+        mobile,
+        beep() {
+          console.log("Beep Boop")
+        }
+      }
+    }
+
+    const tinCan = robotFactory("P-501", false)
+    console.log(tinCan.model);
+    console.log(tinCan.mobile);
+    tinCan.beep()
+
+Destructured Assignment: 
+    assigning an object from within the main object  robot{ functionality {}}
+    as a variable elsewhere in memory. 
+    **Needs to be the same names**
+
+    const robot = {
+      model: '1E78V2',
+      energyLevel: 100,
+      functionality: {
+        beep() {
+          console.log('Beep Boop');
+        },
+        fireLaser() {
+          console.log('Pew Pew');
+        },
+      }
+    };
+
+    const {functionality} = robot;
+
+    console.log(functionality);
+
+    functionality.beep()
+
+
+Built In Objects: 
+
+    Object.keys(x); // Returns array of keys 
+
+    Object.entries(x); // Returns array of arrays of key value pairs 
+
+
+
+    const robot = {
+	  model: 'SAL-1000',
+      mobile: true,
+      sentient: false,
+      armor: 'Steel-plated',
+      energyLevel: 75
+    };
+
+    const robotKeys = Object.keys(robot);
+    console.log(robotKeys);
+
+    const robotEntries = Object.entries(robot);
+    console.log(robotEntries);
+
+    const newRobot = Object.assign({laserBlaster: true, voiceRecognition: true}, robot)
+    console.log(newRobot);
+
+Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object 
+
+__________________________________________
+
+Higher-Order Functions 
+    
+Functions as data; 
+        1 ~ Declare myVeryLongFunctionToDoStuff() 
+        2 ~ set smolFunction = myVeryLongFunctionToDoStuff
+        3 ~ call smolFunction();
+
+    const myHugeAssFunctionThatOnlySaysHelloLikeOverkillMuch = () => {
+      console.log("Hello");
+    }
+    const hi =  myHugeAssFunctionThatOnlySaysHelloLikeOverkillMuch;
+    hi();
+
+
+Functions as Params;
+    1   ~ Declare first function 
+    2   ~ Declare another function 
+    3   ~ set value of variable inside function 2 to the value of function 1. 
+    4   ~ set value of another variable inside function 2
+    5   ~ check to see if varA === varB. 
+
+    const addTwo = num => {                                                 < 1st Function
+      return num + 2;                                  < Same functionality 
+    }
+
+    const checkConsistentOutput = (func, val) => {
+      let checkA = val + 2;                             < Same functionality 
+      let checkB = func(val);                                               < 1st Function
+      return checkA === checkB ? func(val) : 'inconsistent results';                        check if a===b ? perform : log error
+    }
+
+    console.log(checkConsistentOutput(addTwo, 10));
+    console.log(checkConsistentOutput(addTwo, 4));
+
+__________________________________________
+
+Iterators: 
+    array methods that iterate through arrays for us. 
+
+    let myArray = [1,2,3,4,5,6]; 
+
+    myArray.forEach(element => {
+        console.log(element)
+        //do stuff
+        //on each and every element, stuff is done.
+    })
+
+    const newArray = myArray.map(element => {
+        return element * 3; 
+
+        //do stuff 
+        //on each and every element, stuff is done. 
+        //New Array is returned.
+    })
+
+    const filteredArray = myArray.filter(element => {
+        return typeof element === 'string';
+
+        //Do stuff 
+        //on each and every element, stuff is done. 
+        //If element meets condition, it is added to filteredArray
+    })
+
+    const indexOfFour = myArray.findIndex(element => {
+        return element = 4;
+
+        //Do stuff
+        //Check each and every element, return only element = 4;
+    })
+
+
+    const sumOfMyArray = myArray.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue;
+
+        //Do stuff 
+        //Each element, add currentValue to accumulator. 
+    })
+
+Iterator Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods 
+
+Array Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array 
+
+__________________________________________
+
+Errors and Debugging;   
+
+Errors:
+    1)  Dissect the Error
+        First 2 Lines: 
+            TypeError: students.filter is not a function
+                at /home/runner/FearlessNewDev/index.js:21:26
+    
+    2)  Ask Yourself, Is the Solution In the Error?
+            students.filter... Wrong Type?
+            Calling Array method on an Object? 
+
+    3)  Search on the Web for Instances of This Error.
+            MDN Docs 
+    
+    4) Compare Different Use Cases to Yours.
+            Stack Overflow 
+
+    5)  Try to implement the solution.
+            Swap Object to Array
+    
+    6)  If It Doesn’t Work, Repeat Steps 2-4.
+            Repeat and try to find answer
+
+    7)  Ask The Question Yourself.
+            Ask for help
+
+Debugging: 
+    
+    Stack Eror Traces ~ Important information about what went wrong, where. 
+
+    /home/ccuser/workspace/learn-javascript-debugging-code/script.js:5
+    if (numberSum > total;) {
+                         ^
+
+    SyntaxError: Unexpected token ;
+
+    Something went wrong inside script.js ~ Line 5. 
+    Specifically a syntax error. 
+    REPL received unexpected ; character. 
+
+
+Error Types: 
+    Syntax Error:       Typo. 
+
+    Reference Error:    The thing you're calling doesnt exist.
+
+    Type Error:         Performing operation on wrong type. 
+
+
+Steps: 
+    1)  Run Code 
+
+    2)  Find file and Line, identify bug. 
+
+    3)  Fix bug, re-run code. 
+
+    4) Repeat 1-3 untill bug-free! 
+
+
+Silent Bugs:
+    console.log()   
+    the variables after each operation. See what goes wrong where. 
+
+
+Docs 1st, Then StackOverflow. 
