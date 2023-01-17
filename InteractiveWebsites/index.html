@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Interactive Websites</h3>
+    <ul style="display: flex; list-style: none; gap: 20px">
+      <li><a target="_blank" href="./project1/index.html">Project 1</a></li>
+      <li><a target="_blank" href="./project2/index.html">Project 2</a></li>
+      <li><a target="_blank" href="./project3/index.html">Project 3</a></li>
+      <li><a target="_blank" href="./project4/index.html">Project 4</a></li>
+      <li><a target="_blank" href="./project5/index.html">Project 5</a></li>
+      <li><a target="_blank" href="./project6/index.html">Project 6</a></li>
+    </ul>
+    <p>
+      <br />
+      DOM:
+      <br />
+      <br />
+      Document Object Model <br />
+      "Tree-like structure, used to conceptualize heirarchy and access elements"
+      <br />
+      <br />
+      Think of a HTML page as one huge object
+      <br />
+      <br />
+      let DOM = html { root <br />
+      head: { Parent of title <br />
+      title: { Child of head <br />
+      value: "The Heading" <br />
+      } <br />
+      } <br />
+      body: { <br />
+      h1: { <br />
+      value: "Hello World" <br />
+      } <br />
+      div: { <br />
+      p :{ <br />
+      value: "Weee" <br />
+      } <br />
+      p :{ <br />
+      value: "Wooo" <br />
+      } <br />
+      } <br />
+      } <br />
+      }
+      <br />
+      <br />
+      Nodes and Elements: <br />
+      Element Notes: html body / Actual HTML elements. <br />
+      Text Nodes: "The Title" / Just text
+    </p>
+    <hr />
+    <h3>Document</h3>
+    <p>
+      <br />
+      Document Keyword; <br />
+      in the broweser runtime, the document keyword points to <br />
+      the root node (html) of the whole DOM.
+      <br />
+      <br />
+      <br />
+      Change an element: <br />
+      Specifically here the body element.
+      <br />
+      <br />
+      document.body.innerHTML = "someText"
+      <br />
+      <br />
+      hmtl: { <br />
+      head : { <br />
+      // <br />
+      } <br />
+      body: { <br />
+      innerHTML: "someText" <br />
+      } <br />
+      }
+      <br />
+      <br />
+      Select an element;
+      <br />
+      <br />
+      document.querySelector('p'); ~ Returns first element matching selector.
+      <br />
+      document.getElementById('bio'); ~ Returns the element with the matching
+      id. <br />
+      document.getElementsByClassName('student'); ~ Returns array of elements
+      with matching classname. (Accessed Via Indexing) <br />
+      document.getElementsByTagName('li'); ~ Returns array of elements with
+      matching tag. (Accessed Via Indexing)
+      <br />
+      <br />
+      <br />
+      Select + Manipulate; <br />
+      document.querySelector('.blue').style.fontFamily = 'Roboto';
+      <br />
+      <br />
+      Traversing the DOM: <br />
+      Each element has .parentNode and .children properties.
+      <br />
+      <br />
+      .parentNode Returns parent of specified element in DOM. (Root node will
+      return null) <br />
+      .children Returns an array of specified element's children.
+      <br />
+      <br />
+      Create Element: <br />
+      let newParagraph = document.createElement('p');
+      <br />
+      <br />
+      Manipulate new Element: <br />
+      newParagraph.id = 'info'; <br />
+      newParagraph.innerHTML = 'The text inside the paragraph';
+      <br />
+      <br />
+      Add a new Element: <br />
+      document.body.appendChild(paragraph);
+      <br />
+      <br />
+      Remove Element: <br />
+      document.body.removeChild(paragraph);
+      <br />
+      <br />
+      Add functionality: <br />
+      Handle single click event, use .onclick = () {}, <br />
+      Handle many different click events, use .addEventListener("click", () =>
+      {})
+      <br />
+      <br />
+      let element = document.querySelector('button'); <br />
+      element.onclick = function() { <br />
+      element.style.backgroundColor = 'blue' <br />
+      }; <br />
+      vs <br />
+      let element = document.querySelector('button'); <br />
+      element.addEventListener("click", () => { <br />
+      //Do stuff <br />
+      })
+      <br />
+      <br />
+      element.addEventListener("click", functionCall(), options?);
+    </p>
+    <hr />
+    <h3>Dom Events</h3>
+    <p>
+      <br />
+      An event is literally any user interaction <br />
+      or browser manipulation that triggers functionality.
+      <br />
+      <br />
+      Adding Event Handlers: <br />
+      let readMore = document.getElementById('read-more'); <br />
+      let moreInfo = document.getElementById('more-info');
+      <br />
+      <br />
+      function showInfo() { <br />
+      moreInfo.style.display = "block"; <br />
+      }
+      <br />
+      <br />
+      readMore.addEventListener('click', showInfo)
+      <br />
+      <br />
+      Removing Event Handlers: <br />
+      readMore.removeEventListener('click', showInfo)
+      <br />
+      <br />
+      <br />
+      Event Object: <br />
+      The event object can be passed to listeners to tell JavaScript <br />
+      about the event that triggered the function.
+      <br />
+      <br />
+      function eventHandlerFunction(event){ <br />
+      console.log(event.timeStamp); <br />
+      }
+      <br />
+      <br />
+      eventTarget.addEventListener('click', eventHandlerFunction);
+      <br />
+      <br />
+      Event Types: <br />
+      Hella; https://developer.mozilla.org/en-US/docs/Web/Events
+      <br />
+      <br />
+      .addEventListener('mouseover', increaseWidth); <br />
+      .addEventListener('mouseup', changeBackground); <br />
+      .addEventListener('mouseout', changeText); <br />
+      .addEventListener('mousedown', showItem);
+      <br />
+      <br />
+      .addEventListener('keydown', up); <br />
+      .addEventListener('keyup', down)
+      <br />
+    </p>
+    <hr />
+    <h3>HTML Forms</h3>
+    <p>
+      <br />
+      Action declares where form is sent <br />
+      Method declares what HTTP VERB it uses GET/POST etc
+      <br />
+      <br />
+      &gt;form action="x" method="y"> <br />
+      //stuff <br />
+      &gt;/form>
+      <br />
+      <br />
+      Input: <br />
+      type declares which type the input will accept <br />
+      (text, number, password, etc)
+      <br />
+      <br />
+      name declares what the data key will be when sent to the server <br />
+      (yyy: "Hello World")
+      <br />
+      <br />
+      value declares a default value that pre-inputted to the field. Bad
+      Practice
+      <br />
+      <br />
+      placeholder declares a default shadow value that is displayed on the
+      field. Good practice.
+      <br />
+      <br />
+      <input type="x" name="yyy" value?="z" placeholder?="a" />
+      <br />
+      <br />
+      Label: <br />
+      Each input should have an accompanying Label. <br />
+      label.for === input.name
+      <br />
+      <br />
+      <label for="x"> Hello World </label>
+      <br />
+      <br />
+      Dropdowns:
+      <br />
+      <br />
+      &lt;label for="lunch">What's for lunch?lgt;/label&gt; <br />
+      &lt;select id="lunch" name="lunch"&gt; <br />
+      &lt;option value="pizza">Pizza&lt;/option&gt; <br />
+      &lt;option value="curry">Curry&lt;/option&gt; <br />
+      &lt;option value="salad">Salad&lt;/option&gt; <br />
+      &lt;option value="ramen">Ramen&lt;/option&gt; <br />
+      &lt;option value="tacos">Tacos&lt;/option&gt; <br />
+      &lt;/select&lt;
+      <br />
+      <br />
+      DataList: <br />
+      &lt; label for="sauce">What type of sauce would you like?&lt; /label>
+      <br />
+      &lt; input list="sauces" id="sauce" name="sauce"> <br />
+      &lt; datalist id="sauces"> <br />
+      &lt; option value="ketchup"> &lt; /option> <br />
+      &lt; option value="mayo">&lt;/option> <br />
+      &lt; option value="mustard"> &lt; /option> <br />
+      &lt; /datalist>
+      <br />
+      <br />
+      TextArea: <br />
+      &lt;label for="blog">New Blog Post: &lt;/label> <br />
+      &lt;br> <br />
+      &lt;textarea id="blog" name="blog" rows="5" cols="30"> <br />
+      &lt;/textarea>
+      <br />
+      <br />
+      Submit Button: <br />
+      invokes the action/method of the form. <br />
+      &lt; input type="submit" value="Send">
+      <br />
+    </p>
+    <hr />
+    <h3>Validation</h3>
+    <p>
+      Assume all user input is toxic sludge.
+      <br />
+      <br />
+      Client-Side Validation: <br />
+      Much Much Cheaper! <br />
+      RegEx <br />
+      HTML form attributes <br />
+      JavaScript Form Validation - <br />
+      Parsley.js For Native JavaScript <br />
+      Formik For React (written in TS)
+      <br />
+      <br />
+      Back-End Validation: <br />
+      Validate data without malicious users seeing! <br />
+      Back-End should never trust the data it receives.
+      <br />
+      <br />
+      Can make async calls to server to validate before sending form.
+      <br />
+
+      <br />HTML Validation:
+      <br />
+      <br />Require: <br />
+      add attribute "required" to input.
+      <br />
+      <br />Number Limits: <br />
+      add attribute min="0" to specify a lower limit. <br />
+      add attribute max="99" to specify an upper limit.
+      <br />
+      <br />Length Limits: <br />
+      add attribute minlength="0" to specify a lower limit. <br />
+      add attribute maxlength="99" to specify an upper limit.
+      <br />
+      <br />Matching Pattern: <br />
+      add attribute pattern="x" to specify that an input must match a RegEx
+      Pattern.
+    </p>
+    <br />
+  </body>
+</html>

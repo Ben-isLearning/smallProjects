@@ -1,0 +1,252 @@
+JavaScript makes Websites interactive. Woo. 
+
+Js comes in through <script> tag 
+      	<script src="script.js"></script>
+
+Can tell html to stop to load a <script> tag 
+    with the defer attriubte. 
+
+Can tell html to load a <script> tag as well as rest of page 
+    with the async attribute. 
+
+____________________________________________________
+
+DOM:
+
+Document Object Model 
+    "Tree-like structure, used to conceptualize heirarchy and access elements" 
+
+Think of a HTML page as one huge object 
+
+let DOM = html {                    <root 
+    head: {                         <Parent of title 
+        title: {                    <Child of head
+            value: "The Heading"
+        }
+    }
+    body: {
+        h1: {
+            value: "Hello World"
+        }
+        div: {
+            p :{
+                value: "Weee"
+            }
+            p :{
+                value: "Wooo"
+            }
+        }
+    }
+}
+
+Nodes and Elements:
+    Element Notes:  <html> <body>   / Actual HTML elements. 
+    Text Nodes: "The Title"         / Just text
+
+____________________________________________________
+
+Document Keyword;
+    in the broweser runtime, the document keyword points to 
+    the root node (<html>) of the whole DOM. 
+
+
+Change an element:
+    Specifically here the body element. 
+
+    document.body.innerHTML = "someText" 
+
+    hmtl: {
+        head : {
+            //
+        }
+        body: {
+            innerHTML: "someText"
+        }
+    }
+
+Select an element;
+    
+    document.querySelector('p');                ~ Returns first element matching selector.
+    document.getElementById('bio');             ~ Returns the element with the matching id. 
+    document.getElementsByClassName('student'); ~ Returns array of elements with matching classname.  (Accessed Via Indexing)
+    document.getElementsByTagName('li');        ~ Returns array of elements with matching tag. (Accessed Via Indexing)
+
+
+Select + Manipulate; 
+    document.querySelector('.blue').style.fontFamily = 'Roboto';
+
+Traversing the DOM: 
+    Each element has .parentNode and .children properties. 
+    
+    .parentNode Returns parent of specified element in DOM. (Root node will return null)
+    .children Returns an array of specified element's children. 
+
+Create Element: 
+    let newParagraph = document.createElement('p'); 
+
+Manipulate new Element:
+    newParagraph.id = 'info'; 
+    newParagraph.innerHTML = 'The text inside the paragraph';
+
+Add a new Element: 
+    document.body.appendChild(paragraph);
+
+Remove Element: 
+    document.body.removeChild(paragraph);
+
+Add functionality: 
+    Handle single click event, use .onclick = () {}, 
+    Handle many different click events, use .addEventListener("click", () => {})
+    
+    let element = document.querySelector('button');
+    element.onclick = function() { 
+      element.style.backgroundColor = 'blue' 
+    };
+vs  
+    let element = document.querySelector('button');
+    element.addEventListener("click", () => {
+        //Do stuff 
+    })
+
+    element.addEventListener("click", functionCall(), options?); 
+
+____________________________________________________
+
+DOM Events: 
+    An event is literally any user interaction
+    or browser manipulation that triggers functionality. 
+
+Adding Event Handlers: 
+    let readMore = document.getElementById('read-more');
+    let moreInfo = document.getElementById('more-info');
+
+    function showInfo() {
+     moreInfo.style.display = "block"; 
+    }
+
+    readMore.addEventListener('click', showInfo)
+
+Removing Event Handlers:
+    readMore.removeEventListener('click', showInfo)
+
+
+Event Object: 
+    The event object can be passed to listeners to tell JavaScript
+    about the event that triggered the function.
+
+    function eventHandlerFunction(event){
+       console.log(event.timeStamp);
+    }
+
+    eventTarget.addEventListener('click', eventHandlerFunction);
+
+Event Types: 
+    Hella; https://developer.mozilla.org/en-US/docs/Web/Events
+
+
+    .addEventListener('mouseover', increaseWidth);
+    .addEventListener('mouseup', changeBackground);
+    .addEventListener('mouseout', changeText);
+    .addEventListener('mousedown', showItem);
+    
+    .addEventListener('keydown', up);
+    .addEventListener('keyup', down)
+
+____________________________________________________
+
+Validation:
+   Assume all user input is toxic sludge. 
+
+Client-Side Validation:
+    Much Much Cheaper! 
+        RegEx
+        HTML form attributes
+        JavaScript Form Validation - 
+            Parsley.js  For Native JavaScript 
+            Formik      For React (written in TS)
+
+Back-End Validation: 
+    Validate data without malicious users seeing!
+    Back-End should never trust the data it receives. 
+
+    Can make async calls to server to validate before sending form. 
+
+____________________________________________________
+
+HTML Forms: 
+    Action declares where form is sent 
+    Method declares what HTTP VERB it uses GET/POST etc  
+
+    <form action="x" method="y">
+    //stuff
+    </form> 
+
+Input:
+    type declares which type the input will accept 
+    (text, number, password, etc) 
+
+    name declares what the data key will be when sent to the server 
+    (yyy: "Hello World")
+
+    value declares a default value that pre-inputted to the field. Bad Practice 
+
+    placeholder declares a default shadow value that is displayed on the field. Good practice. 
+
+    <input type="x" name="yyy" value?="z" placeholder?="a">
+     
+Label: 
+    Each input should have an accompanying Label. 
+    label.for === input.name
+
+    <label for="x"> Hello World </label>
+
+Dropdowns: 
+
+    <label for="lunch">What's for lunch?</label>
+    <select id="lunch" name="lunch">
+      <option value="pizza">Pizza</option>
+      <option value="curry">Curry</option>
+      <option value="salad">Salad</option>
+      <option value="ramen">Ramen</option>
+      <option value="tacos">Tacos</option>
+    </select>
+
+DataList: 
+	<label for="sauce">What type of sauce would you like?</label>
+    <input list="sauces" id="sauce" name="sauce">
+	<datalist id="sauces"> 
+        <option value="ketchup"> </option>
+        <option value="mayo"> </option>
+        <option value="mustard"> </option>
+    </datalist>
+
+TextArea: 
+    <label for="blog">New Blog Post: </label>
+    <br>
+    <textarea id="blog" name="blog" rows="5" cols="30">
+    </textarea>
+
+Submit Button: 
+    invokes the action/method of the form. 
+    <input type="submit" value="Send">
+
+____________________________________________________
+
+HTML Validation:
+
+Require:
+    add attribute "required" to input. 
+
+Number Limits:
+    add attribute min="0" to specify a lower limit.
+    add attribute max="99" to specify an upper limit.
+
+Length Limits: 
+    add attribute minlength="0" to specify a lower limit.
+    add attribute maxlength="99" to specify an upper limit.
+
+Matching Pattern:
+    add attribute pattern="x" to specify that an input must match a RegEx Pattern. 
+
+____________________________________________________
+
