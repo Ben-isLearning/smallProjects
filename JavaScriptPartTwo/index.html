@@ -6,5 +6,688 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <h2>Arrays</h2>
+    <ul style="display: flex; gap: 20px; list-style: none">
+      <li><a target="_blank" href="./project1">Project 1</a></li>
+      <li><a target="_blank" href="./project2">Project 2</a></li>
+      <li><a target="_blank" href="./project3">Project 3</a></li>
+      <li><a target="_blank" href="./project4">Project 4</a></li>
+    </ul>
+    <p>
+      Creation; <br />
+      let myArray = ["values", "go", "here", 21, true]; <br />
+      const anotherArray = [1, 2, 3]; <br />
+      Accessing via Indexing: <br />
+      console.log(myArray[0]) //Prints "values"; <br />
+      <br />
+      <br />
+      Changing via Indexing: <br />
+      myArray[0] = "new values"; <br />
+      <br />
+      <br />
+      Properties: <br />
+      myArray.length // Returns 5 <br />
+      <br />
+      <br />
+
+      Methods: <br />
+      myArray.push(false) // Pushes another value onto the end. <br />
+      <br />
+
+      myArray.pop() // Pops a value off from the end. <br />
+      <br />
+      myArray.join(", ") // Returns "values, go, here, 21, true, 1, 2, 3";<br />
+      // Takes a string Value, Returns a String <br />
+      <br />
+      myArray.slice() //Returns ["values", "go", "here", 21, true]; <br />
+      // Take nothing, Return whole array. <br />
+      myArray.slice(1) //Returns ["go", "here", 21, true]; <br />
+      // Take a starting index value. returns from Starting to end of array.
+      Returns Copy. <br />
+      myArray.slice(2, 4) // Returns ["here", 21] <br />
+      // Take a starting index value, and and ending index value. Returns from
+      Starting, to JUST BEFORE ending. Returns Copy. <br />
+      myArray.slice(-2) // Returns [21, true]; <br />
+      // Take a starting index (-2 from the end). <br />
+      <br />
+
+      myArray.splice(2, 1) //Returns ["values", "go", "here", true]; <br />
+      // Take a Start index, Delete Count - DESTRUCTIVE - OPERATES ON ARRAY
+      <br />
+      myArray.splice(0, 0, "NewFirstEntry") // Returns ["newFirstEntry",
+      "values", "go", "here", true]; <br />
+      // Take a Start index, Delete Count, data value - DESTRUCTIVE - OPERATES
+      ON ARRAY. <br />
+      myArray.splice(-1, 1, false) // Returns ["newFirstEntry", "values", "go",
+      "here", false]; <br />
+      // Take a start index, Delete Count, data value - DESTRUCTIVE - OPERATES
+      ON ARRAY. <br />
+      <br />
+      let value = myArray.shift() //Returns "values"; <br />
+      // Returns new value. Deletes value from Array - DESTRUCTIVE - OPERATES ON
+      ARRAY. <br />
+      <br />
+      myArray.unshift(1,2,3); //Returns [1, 2, 3, "newFirstEntry", "values",
+      "go", "here", false]; <br />
+      // Adds one or more values to the array. Returns the new length of the
+      array. <br />
+      <br />
+      let newArray = myArray.concat(anotherArray) // Returns ["values", "go",
+      "here", 21, true, 1, 2, 3]; <br />
+      // Returns new array <br />
+      <br />
+      <br />
+      Nested / 3d Arrays; <br />
+      let simpleArray = [1,2,3,4,5,6,7,8,9]; <br />
+      let nestedArray = [[1,2,3], [4,5,6], [7,8,9]]; <br />
+      <br />
+      simpleArray[0] //Prints 1 <br />
+      nestedArray[0] //Prints [1,2,3] <br />
+      nestedArray[0][0] //Prints 1 <br />
+    </p>
+    <hr />
+    <h3>Basic Loops</h3>
+    <p>
+      For Loop: Checks, Then Loops
+      <br />
+      for (let i = 0; i > 10; i++) { <br />
+      console.log(i) <br />
+      } <br />
+      <br />
+      for (Declare Iterator, Stopping Condition, Iteration Statement) { <br />
+      //Do Stuff <br />
+      } <br />
+      <br />
+      Reverse For Loop: <br />
+      for (let i = 10; i >= 0; i--) { <br />
+      console.log(i) <br />
+      } <br />
+      <br />
+      for (Declare Iterator, Stopping Condition, Iteration Statement) { <br />
+      //Do Stuff <br />
+      } <br />
+      <br />
+      Looping Through Arrays; <br />
+      <br />
+      for (let i=0; i &gt; myArray.length; i++) { <br />
+      //Do Stuff } <br />
+      <br />
+      for (Declare Iterator, Stopping Condition - I becomes greater than length
+      of array, Iteration Statement) { <br />
+      //Do Stuff <br />
+      } <br />
+      <br />
+      Nested Loops: Bye Bye BigO <br />
+      <br />
+      for (let i = 0; i &gt; 3; i++) { <br />
+      console.log(`Loop ${i}`); <br />
+      for (let j = 0; j &gt;= 5; j++) { <br />
+      console.log(j+1); <br />
+      } <br />
+      } <br />
+      <br />
+      for (Declare Iterator, Stopping Condition, Iteration Statement) { <br />
+      //Do Stuff <br />
+      for (Declare Another Iterator, Another Stopping Condition, Another
+      Iteration Statement) { <br />
+      //Do Stuff <br />
+      } <br />
+      } <br />
+
+      While Loop: Keeps going untill satisfied <br />
+      <br />
+      let number; <br />
+      while (number != 5) { <br />
+      number = Math.floor(Math.random() * <br />
+      10); <br />
+      console.log(number); <br />
+      } <br />
+      <br />
+      while (declare Condition) { <br />
+      //Do stuff until satisfied. <br />
+      } <br />
+      <br />
+      Do While Loop: Keeps going untill satisfied <br />
+      <br />
+      let target = 10 <br />
+      let current = 0; <br />
+      <br />
+      do { <br />
+      current++ <br />
+      console.log("Added One!"); <br />
+      } while (current &gt; target); <br />
+      <br />
+      do { <br />
+      //Do stuff <br />
+      } while (Stopping Condition) <br />
+      <br />
+      Break Keyword: can be used to break; out of loops. <br />
+      <br />
+      for ( let i = 0; i &gt; 10; i++) { <br />
+      console.log(i) <br />
+      if (i == 3) { <br />
+      break; <br />
+      } <br />
+      } <br />
+    </p>
+    <hr />
+    <h3>Looping Through Arrays</h3>
+    <p>
+      For...Of Loop: <br />
+      <br />
+      let hobbies = ["running", "cooking", "coding"]; <br />
+      <br />
+      for (const hobby of hobbies) { <br />
+      console.log(`i enjoy ${hobby}`); <br />
+      } <br />
+      <br />
+      let stringOfChars = "joey" <br />
+      <br />
+      for (const char of stringOfChars) { <br />
+      console.log(char); <br />
+      } <br />
+      <br />
+      for (Declare Iterator of ListToItterate) { <br />
+      //Do stuff <br />
+      } <br />
+      <br />
+      Break; Breaks out of the loop altogether (This only logs the first 2
+      birds. ) <br />
+      <br />
+      const strangeBirds = ['Shoebill', 'Cockatrice', 'Basan',
+      'Terrorbird','Parotia','Kakapo'];
+      <br />
+      for (const bird of strangeBirds) { <br />
+      if (bird === 'Basan'){ <br />
+      break; <br />
+      } <br />
+      console.log(bird); <br />
+      } <br />
+      <br />
+      Continue; Stops the current iteration, and continues from the top. (This
+      logs everything but the Cow)
+      <br />
+      const strangeBirds = ['Shoebill', 'Cockatrice', 'Basan',
+      'Terrorbird','Parotia','Kakapo']; <br />
+      <br />
+      for (const bird of strangeBirds) { <br />
+      if (bird === 'Cow'){ <br />
+      continue; <br />
+      } <br />
+      console.log(bird); <br />
+      } <br />
+    </p>
+    <hr />
+    <h3>Objects</h3>
+    <ul style="display: flex; gap: 20px; list-style: none">
+      <li><a target="_blank" href="./project5">Project 5</a></li>
+      <li><a target="_blank" href="./project6">Project 6</a></li>
+      <li><a target="_blank" href="./project7">Project 7</a></li>
+      <li><a target="_blank" href="./project8">Project 8</a></li>
+      <li><a target="_blank" href="./project9">Project 9</a></li>
+    </ul>
+    <p>
+      Create an object: <br />
+      let myObject = { <br />
+      homePlanet: "Earth", <br />
+      color: "Blue" <br />
+      }; <br />
+      <br />
+      Accessing Properties Via Dot: <br />
+      myObject.homePlanet; //Returns "Earth" <br />
+      <br />
+      Accessing Properties Via Bracket: <br />
+      myObject["color"]; //Returns "Blue" <br />
+      <br />
+      Assigning a property: <br />
+      myObject.numEngines = 4; <br />
+      myObject["numWheels"] = 4; <br />
+      <br />
+      Assigning a Method: <br />
+      <br />
+      let myObject = { <br />
+      homePlanet: "Earth", <br />
+      color: "Blue" <br />
+      <br />
+      spin: function() { <br />
+      console.log("World is spining..."); <br />
+      } <br />
+      }; <br />
+      <br />
+      Nested Objects: <br />
+      See Project 5. <br />
+      <br />
+      Passing By Reference: <br />
+      Objects are passed by reference. <br />
+      changing myObject.color elsewhere will change the actual color property of
+      the object <br />
+      <br />
+      let spaceship = { <br />
+      'Fuel Type' : 'Turbo Fuel', <br />
+      homePlanet : 'Earth' <br />
+      }; <br />
+      <br />
+      function greenEnergy(obj) { <br />
+      obj[`Fuel Type`] = `avocado oil` <br />
+      } <br />
+      greenEnergy(spaceship) <br />
+      <br />
+      function remotelyDisable(obj) { <br />
+      obj[`disabled`] = true <br />
+      } <br />
+      <br />
+      remotelyDisable(spaceship); <br />
+      <br />
+      console.log(spaceship); <br />
+
+      <br />
+      Looping Through Objects: <br />
+      For...In <br />
+      <br />
+      let spaceship = { <br />
+      crew: { <br />
+      captain: { <br />
+      name: 'Lily', <br />
+      degree: 'Computer Engineering', <br />
+      cheerTeam() { console.log('You got this!') } <br />
+      }, <br />
+      'chief officer': { <br />
+      name: 'Dan', <br />
+      degree: 'Aerospace Engineering', <br />
+      agree() { console.log('I agree, captain!') } <br />
+      }, <br />
+      medic: { <br />
+      name: 'Clementine', <br />
+      degree: 'Physics', <br />
+      announce() { console.log(`Jets on!`) } }, <br />
+      translator: { <br />
+      name: 'Shauna', <br />
+      degree: 'Conservation Science', <br />
+      powerFuel() { console.log('The tank is full!') } <br />
+      } <br />
+      } <br />
+      }; <br />
+      <br />
+      for (let crewMember in spaceship.crew) { <br />
+      console.log(`${crewMember}: ${cspaceship.crew[crewMember].name}`) <br />}
+    </p>
+    <hr />
+    <h3>Advanced Objects</h3>
+    <p>
+      this: <br />
+      this points to its parent. <br />
+      const robot = { <br />
+      model: "1E78V2", <br />
+      energyLevel: 100, <br />
+      provideInfo() { <br />
+      return `I am ${this.model} and my current energy level is
+      ${this.energyLevel}` <br />
+      }, <br />
+      }; <br />
+      <br />
+      In this instance this.model is the same as robot.model. <br />
+      <br />
+      Arrow Functions and this: <br />
+      Don't quite work together because the this keyword is bound to the global
+      object. <br />
+      <br />
+      Privacy: <br />
+      common convention see's us putting _ before properties to signify that
+      properties <br />
+      should not be altered. <br />
+      <br />
+      _fixedAmount: 100; <br />
+      <br />
+      Getters: <br />
+      Methods with the sole purpose of getting internal properties. <br />
+      <br />
+      const person = { <br />
+      _firstName: 'John', <br />
+      _lastName: 'Doe', <br />
+      get fullName() { <br />
+      if (this._firstName && this._lastName){ <br />
+      return `${this._firstName} ${this._lastName}`; <br />
+      } else { <br />
+      return 'Missing a first name or a last name.'; <br />
+      } <br />
+      } <br />
+      } <br />
+      <br />
+      // To call the getter method: <br />
+      person.fullName; // 'John Doe' <br />
+      <br />
+      Setters: <br />
+      Methods with sole purpose of setting value of internal properties. <br />
+      <br />
+      const person = { <br />
+      _age: 37, <br />
+      set age(newAge){ <br />
+      if (typeof newAge === 'number'){ <br />
+      this._age = newAge; <br />
+      } else { <br />
+      console.log('You must assign a number to age'); <br />
+      } <br />
+      } <br />
+      }; <br />
+      <br />
+      Factory Functions: <br />
+      Literally a function that acts as a factory to churn out individual
+      objects <br />
+      <br />
+      function robotFactory(model, mobile) { <br />
+      return { <br />
+      model: model, <br />
+      mobile: mobile, <br />
+      beep() { <br />
+      console.log("Beep Boop") <br />
+      } <br />
+      } <br />
+      } <br />
+      <br />
+      const tinCan = robotFactory("P-500", true) <br />
+      console.log(tinCan.model); <br />
+      tinCan.beep() <br />
+      <br />
+      ES6 Shorthand: <br />
+      <br />
+      const robotFactory = (model, mobile) => { <br />
+      return { <br />
+      model, <br />
+      mobile, <br />
+      beep() { <br />
+      console.log("Beep Boop") <br />
+      } <br />
+      } <br />
+      } <br />
+      <br />
+      const tinCan = robotFactory("P-501", false) <br />
+      console.log(tinCan.model); <br />
+      console.log(tinCan.mobile); <br />
+      tinCan.beep() <br />
+      <br />
+      Destructured Assignment: <br />
+      assigning an object from within the main object robot{ functionality {}}
+      <br />
+      as a variable elsewhere in memory. <br />
+      **Needs to be the same names** <br />
+      <br />
+      const robot = { <br />
+      model: '1E78V2', <br />
+      energyLevel: 100, <br />
+      functionality: { <br />
+      beep() { <br />
+      console.log('Beep Boop'); <br />
+      }, <br />
+      fireLaser() { <br />
+      console.log('Pew Pew'); <br />
+      }, <br />
+      } <br />
+      }; <br />
+      <br />
+      const {functionality} = robot; <br />
+      <br />
+      console.log(functionality); <br />
+      <br />
+      functionality.beep() <br />
+      <br />
+      Built In Objects: <br />
+      <br />
+      Object.keys(x); // Returns array of keys <br />
+      <br />
+      Object.entries(x); // Returns array of arrays of key value pairs <br />
+      <br />
+
+      const robot = { <br />
+      model: 'SAL-1000', <br />
+      mobile: true, <br />
+      sentient: false, <br />
+      armor: 'Steel-plated', <br />
+      energyLevel: 75 <br />
+      }; <br />
+      <br />
+      const robotKeys = Object.keys(robot); <br />
+      console.log(robotKeys); <br />
+      <br />
+      const robotEntries = Object.entries(robot); <br />
+      console.log(robotEntries); <br />
+      <br />
+      const newRobot = Object.assign({laserBlaster: true, voiceRecognition:
+      true}, robot) <br />
+      console.log(newRobot); <br />
+      <br />
+      Docs:
+      <a
+        target="_blank"
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+        >Here</a
+      >
+    </p>
+    <hr />
+    <h3>Higher Order functions</h3>
+    <p>
+      Functions as data; <br />
+      1 ~ Declare myVeryLongFunctionToDoStuff() <br />
+      2 ~ set smolFunction = myVeryLongFunctionToDoStuff <br />
+      3 ~ call smolFunction(); <br />
+      <br />
+      const myHugeAssFunctionThatOnlySaysHelloLikeOverkillMuch = () => { <br />
+      console.log("Hello"); <br />
+      } <br />
+      const hi = myHugeAssFunctionThatOnlySaysHelloLikeOverkillMuch; <br />
+      hi(); //Prints "Hello"<br />
+
+      <br />
+      Functions as Params; <br />
+      1 ~ Declare first function <br />
+      2 ~ Declare another function <br />
+      3 ~ set value of variable inside function 2 to the value of function 1.
+      <br />
+      4 ~ set value of another variable inside function 2 <br />
+      5 ~ check to see if varA === varB. <br />
+      <br />
+      const addTwo = num => { - 1st Function <br />
+      return num + 2; - Same functionality <br />
+      } <br />
+      <br />
+      const checkConsistentOutput = (func, val) => { <br />
+      let checkA = val + 2; - Same functionality <br />
+      let checkB = func(val); - 1st Function <br />
+      return checkA === checkB ? func(val) : 'inconsistent results'; <br />
+      check if a===b ? perform : log error <br />
+      }
+      <br />
+      console.log(checkConsistentOutput(addTwo, 10)); <br />
+      console.log(checkConsistentOutput(addTwo, 4)); <br />
+    </p>
+    <hr />
+    <h3>Iterators</h3>
+    <ul style="display: flex; gap: 20px; list-style: none">
+      <li><a target="_blank" href="./project10/script.js">Project 10</a></li>
+      <li><a target="_blank" href="./project11/script.js">Project 11</a></li>
+      <li><a target="_blank" href="./project12/script.js">Project 12</a></li>
+      <li><a target="_blank" href="./project13/script.js">Project 13</a></li>
+      <li><a target="_blank" href="./project14/script.js">Project 14</a></li>
+      <li><a target="_blank" href="./project15/script.js">Project 15</a></li>
+      <li><a target="_blank" href="./project17/script.js">Project 17</a></li>
+      <li>
+        <a target="_blank" href="./project17/script2.js">Project 17 Short</a>
+      </li>
+      <li><a target="_blank" href="./project18/script.js">Project 18</a></li>
+      <li><a target="_blank" href="./project19/script.js">Project 19</a></li>
+    </ul>
+    <ul style="display: flex; gap: 20px; list-style: none">
+      <li><a target="_blank" href="./project20/script.js">Project 20</a></li>
+      <li><a target="_blank" href="./project21/script.js">Project 21</a></li>
+      <li><a target="_blank" href="./project22/script.js">Project 22</a></li>
+      <li><a target="_blank" href="./project23/script.js">Project 23</a></li>
+      <li><a target="_blank" href="./project24/script.js">Project 24</a></li>
+      <li><a target="_blank" href="./project25/script.js">Project 25</a></li>
+      <li><a target="_blank" href="./project26/script.js">Project 26</a></li>
+      <li><a target="_blank" href="./project27/script.js">Project 27</a></li>
+      <li><a target="_blank" href="./project28/script.js">Project 28</a></li>
+      <li><a target="_blank" href="./project29/script.js">Project 29</a></li>
+      <li><a target="_blank" href="./project30/script.js">Project 30</a></li>
+    </ul>
+    <p>
+      array methods that iterate through arrays for us.
+      <br />
+      <br />
+      let myArray = [1,2,3,4,5,6];
+      <br />
+      <br />
+      myArray.forEach(element => { <br />
+      console.log(element) <br />
+      //do stuff <br />
+      //on each and every element, stuff is done. <br />
+      })
+      <br />
+      <br />
+      const newArray = myArray.map(element => { <br />
+      return element * 3;
+      <br />
+      <br />
+      //do stuff <br />
+      //on each and every element, stuff is done. <br />
+      //New Array is returned. <br />
+      })
+      <br />
+      <br />
+      const filteredArray = myArray.filter(element => { <br />
+      return typeof element === 'string';
+      <br />
+      <br />
+      //Do stuff <br />
+      //on each and every element, stuff is done. <br />
+      //If element meets condition, it is added to filteredArray <br />
+      })
+      <br />
+      <br />
+      const indexOfFour = myArray.findIndex(element => { <br />
+      return element = 4;
+      <br />
+      <br />
+      //Do stuff <br />
+      //Check each and every element, return only element = 4; <br />
+      })
+      <br />
+      <br />
+      <br />
+      const sumOfMyArray = myArray.reduce((accumulator, currentValue) => {
+      <br />
+      return accumulator + currentValue;
+      <br />
+      <br />
+      //Do stuff <br />
+      //Each element, add currentValue to accumulator. <br />
+      })
+      <br />
+      <br />
+      Iterator Method
+      <a
+        target="_blank"
+        href=" https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods"
+        >Documentation</a
+      >
+
+      <br />
+      <br />
+      Array
+      <a
+        target="_blank"
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+        >Documentation</a
+      >
+    </p>
+    <hr />
+    <h3>Errors and Debugging</h3>
+    <ul style="display: flex; list-style: none; gap: 20px">
+      <li><a target="_blank" href="./project31/script.js">Project 31</a></li>
+      <li><a target="_blank" href="./project32/script.js">Project 32</a></li>
+    </ul>
+    <p>
+      <br />
+      Errors and Debugging;
+      <br />
+      <br />
+      Errors: <br />
+      1) Dissect the Error <br />
+      First 2 Lines: <br />
+      TypeError: students.filter is not a function <br />
+      at /home/runner/FearlessNewDev/index.js:21:26
+      <br />
+      <br />
+      2) Ask Yourself, Is the Solution In the Error? <br />
+      students.filter... Wrong Type? <br />
+      Calling Array method on an Object?
+      <br />
+      <br />
+      3) Search on the Web for Instances of This Error. <br />
+      MDN Docs
+      <br />
+      <br />
+      4) Compare Different Use Cases to Yours. <br />
+      Stack Overflow
+      <br />
+      <br />
+      5) Try to implement the solution. <br />
+      Swap Object to Array
+      <br />
+      <br />
+      6) If It Doesn’t Work, Repeat Steps 2-4. <br />
+      Repeat and try to find answer
+      <br />
+      <br />
+      7) Ask The Question Yourself. <br />
+      Ask for help
+      <br />
+      <br />
+      Debugging:
+      <br />
+      <br />
+      Stack Eror Traces ~ Important information about what went wrong, where.
+      <br />
+      <br />
+      /home/ccuser/workspace/learn-javascript-debugging-code/script.js:5 <br />
+      if (numberSum > total;) { <br />
+      ^ <br />
+      SyntaxError: Unexpected token ;
+      <br />
+      <br />
+      Something went wrong inside script.js ~ Line 5. <br />
+      Specifically a syntax error. <br />
+      REPL received unexpected ; character.
+      <br />
+      <br />
+      Error Types: <br />
+      Syntax Error: Typo.
+      <br />
+      <br />
+      Reference Error: The thing you're calling doesnt exist.
+      <br />
+      <br />
+      Type Error: Performing operation on wrong type.
+      <br />
+      <br />
+      Steps: <br />
+      1) Run Code
+      <br />
+      <br />
+      2) Find file and Line, identify bug.
+      <br />
+      <br />
+      3) Fix bug, re-run code.
+      <br />
+      <br />
+      4) Repeat 1-3 untill bug-free!
+      <br />
+      <br />
+      Silent Bugs: <br />
+      console.log() <br />
+      the variables after each operation. See what goes wrong where.
+      <br />
+      <br />
+      Docs 1st, Then StackOverflow.
+    </p>
+  </body>
 </html>
