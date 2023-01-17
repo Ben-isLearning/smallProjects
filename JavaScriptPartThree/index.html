@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Classes</h3>
+    <ul style="display: flex; list-style: none; gap: 20px">
+      <li><a href="./project1/script.js">Project 1</a></li>
+      <li><a href="./project2/script.js">Project 2</a></li>
+      <li><a href="./project3/script.js">Project 3</a></li>
+      <li><a href="./project4/script.js">Project 4</a></li>
+    </ul>
+    <p>
+      <br />
+      Declare a class: <br />
+      class name> {}
+      <br />
+      <br />
+      Constructor: <br />
+      This is how new instances of the class are created <br />
+      constructor(arg1, arg2) { <br />
+      this._1 = arg1; <br />
+      this._2 = arg2; <br />
+      }
+      <br />
+      <br />
+      Instances: <br />
+      more than one insance can be spawned from a single class <br />
+      class Surgeon { <br />
+      constructor(name, department) { <br />
+      this.name = name; <br />
+      this.department = department; <br />
+      } <br />
+      }
+      <br />
+      <br />
+      const surgeonRomero = new Surgeon("Francisco Romero", "Cardiovascular")
+      <br />
+      const surgeonJackson = new Surgeon("Ruth Jackson", "Orthopedics")
+      <br />
+      <br />
+      Methods: <br />
+      functions inside of classes are called methods. <br />
+      in project1 ~ the Dog class has the incrementBehaviour method.
+      <br />
+      <br />
+      Calling Methods: <br />
+      1) create new instance of a class <br />
+      2) call instance>.method(); <br />
+      3) Effect will occur on the instance of the class.
+      <br />
+      <br />
+      <br />
+      Inheritance: <br />
+      The Child inherits all of the properties and methods from the Parent.
+      <br />
+      Liskov Substitution Principle ~ Parents can be replaced with Children
+      without Breaking the application. <br />
+      All children must; not implement any stricter validation rules on input
+      params than their parent. <br />
+      Apply atleast the same rules to all output params as applied by the parent
+      class.
+      <br />
+      <br />
+      Inheriting: <br />
+      childClass extends parentClass { <br />
+      /// <br />
+      } <br />
+      See Project2
+      <br />
+      <br />
+      Static Methods: <br />
+      Methods that are Static - They are not passed Down to the children. <br />
+      See Project3. <br />
+      static method is called directly from the class
+      HospitalEmployee.generatePassword(); <br />
+      Rather than calling from an instance doctorJames.generatePassword(); ~
+      Throws an error.
+      <br />
+      <br />
+      Docs:
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+    </p>
+    <hr />
+    <h3>Modules</h3>
+    <p>
+      Declaration: Declare Script tag as module
+      <script type="module" src=".script.js"></script>
+
+      <br />
+      ES6 Export: <br />
+      /* dom-functions.js */
+      <br />
+      <br />
+      const toggleHiddenElement = (domElement) => { <br />
+      ... <br />
+      } <br />
+      const changeToFunkyColor = (domElement) => { <br />
+      ... <br />
+      }
+      <br />
+      <br />
+      export { toggleHiddenElement, changeToFunkyColor };
+      <br />
+      <br />
+      ES6 Import: <br />
+      import { toggleHiddenElement, changeToFunkyColor} from
+      '/path/to/module.js';
+      <br />
+      <br />
+      <br />
+      Default ES6 Export: <br />
+      const resources = { <br />
+      valueA, <br />
+      valueB <br />
+      } <br />
+      export default resources;
+      <br />
+      <br />
+      Default ES6 Import: <br />
+      import resources from 'module.js' <br />
+      const { valueA, valueB } = resources;
+      <br />
+      <br />
+      Docs:
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+    </p>
+    <hr />
+    <h3>Error Handling</h3>
+    <ul style="display: flex; list-style: none; gap: 20px">
+      <li><a href="./project5/script.js">Project 5</a></li>
+      <li><a href="./project6">Project 6</a></li>
+      <li><a href="./project7/script.js">Project 7</a></li>
+      <li><a href="./project8/script.js">Project 8</a></li>
+    </ul>
+    <p>
+      <br />
+      Error Handling: <br />
+      2 types of bugs; Breaking errors, and Quiet errors. <br />
+      Breaking errors are easy. Quiet errors are hard. <br />
+      Handle them both.
+      <br />
+      <br />Runtime Error: <br />
+      Press Run ~ Application goes bang. <br />
+      Tells us where, what and why.
+      <br />
+      <br />Creating an Error: <br />
+      use Error("This went Bang because ...");
+      <br />
+      <br />Stopping for an Error: <br />
+      use throw keyword to throw a spanner in the works
+      <br />
+      <br />Handling Errors: <br />
+      using the try...catch block. (if anything is thrown, the catch block will
+      catch it)
+      <br />
+      <br />
+      try { <br />
+      if (!condition) { <br />
+      throw Error("Condition Not Met!!!"); <br />
+      } else { <br />
+      // Condition exists... <br />
+      // Do stuff <br />
+      } <br />
+      } catch (e) { <br />
+      //Handle error somehow <br />
+      }
+      <br />
+    </p>
+  </body>
+</html>

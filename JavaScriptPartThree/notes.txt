@@ -1,0 +1,123 @@
+Classes - The basis of Object Oriented Programing. 
+
+Declare a class: 
+    class <name> {}
+
+Constructor:
+    This is how new instances of the class are created 
+    constructor(arg1, arg2) {
+        this._1 = arg1; 
+        this._2 = arg2;  
+    }
+
+Instances: 
+    more than one insance can be spawned from a single class 
+    class Surgeon {
+      constructor(name, department) {
+        this.name = name;
+        this.department = department;
+      }
+    }
+
+const surgeonRomero = new Surgeon("Francisco Romero", "Cardiovascular")
+const surgeonJackson = new Surgeon("Ruth Jackson", "Orthopedics")
+
+Methods:
+    functions inside of classes are called methods. 
+    in project1 ~ the Dog class has the incrementBehaviour method. 
+
+Calling Methods: 
+    1) create new instance of a class 
+    2) call <instance>.method(); 
+    3) Effect will occur on the instance of the class. 
+
+
+Inheritance: 
+    The Child inherits all of the properties and methods from the Parent. 
+    Liskov Substitution Principle ~ Parents can be replaced with Children without Breaking the application.
+        All children must; not implement any stricter validation rules on input params than their parent. 
+                           Apply atleast the same rules to all output params as applied by the parent class. 
+
+Inheriting:
+    childClass extends parentClass {
+        ///
+    }
+    See Project2 
+
+Static Methods: 
+    Methods that are Static - They are not passed Down to the children.
+    See Project3. 
+    static method is called directly from the class HospitalEmployee.generatePassword(); 
+    Rather than calling from an instance doctorJames.generatePassword(); ~ Throws an error. 
+
+Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes 
+__________________________________________________________
+
+Modules: 
+
+Declaration: 
+    Declare Script tag as module
+  <script type="module" src=".script.js"> </script>
+
+ES6 Export:
+    /* dom-functions.js */
+
+    const toggleHiddenElement = (domElement) => {
+    ...
+    }
+    const changeToFunkyColor = (domElement) => {
+    ...
+    }
+    
+    export { toggleHiddenElement, changeToFunkyColor };
+
+ES6 Import: 
+    import { toggleHiddenElement, changeToFunkyColor} from '/path/to/module.js';
+
+
+Default ES6 Export: 
+    const resources = {
+      valueA,
+      valueB
+    }
+    export default resources;
+
+Default ES6 Import: 
+    import resources from 'module.js'
+    const { valueA, valueB } = resources;
+
+Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules 
+
+__________________________________________________________
+
+Error Handling: 
+    2 types of bugs; Breaking errors, and Quiet errors.
+    Breaking errors are easy. Quiet errors are hard. 
+    Handle them both. 
+
+Runtime Error: 
+    Press Run ~ Application goes bang. 
+        Tells us where, what and why. 
+
+Creating an Error: 
+    use Error("This went Bang because ...");
+
+Stopping for an Error: 
+    use throw  keyword to throw a spanner in the works 
+
+Handling Errors: 
+    using the try...catch block. (if anything is thrown, the catch block will catch it)
+
+    try {
+        if (!condition) {
+            throw Error("Condition Not Met!!!");
+        } else {
+            // Condition exists... 
+            // Do stuff
+        }
+    } catch (e) {
+        //Handle error somehow
+    }
+
+__________________________________________________________
+
